@@ -1,5 +1,13 @@
 .character-container {
+    border: solid;
+    height: 100%;
+    max-width: 500px;
+    max-height: 655px;
+    position: relative;
     svg {
+        &:first-of-type {
+            position: relative;
+        }
         position: absolute;
         left: 0;
         top: 0;

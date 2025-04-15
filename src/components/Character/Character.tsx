@@ -16,14 +16,26 @@ type CharacterProps = {
 
 export const Character = ({ color = 'black' }: CharacterProps) => {
     return (
-        <div className="character-container">
-            <Skin color="#794e3d" />
-            <FaceShape />
-            <EyeBrows color="yellow" />
-            <EyesAlmond color="green" />
-            <Nose />
-            <Lips />
-            <Hair color="pink" />
-        </div>
+        <>
+            <div>
+                <div className="character-container">
+                    <Skin color="#794e3d" />
+                    <FaceShape />
+                    <EyeBrows color="#E5BC64" />
+                    <EyesAlmond color="#2D4F00" />
+                    <Nose />
+                    <Lips />
+                    <Hair color="pink" />
+                </div>
+            </div>
+            <div className="settings-container">
+                <button>Face</button>
+                <button>Hair</button>
+                <button>Eyebrows</button>
+                <button>Eyes</button>
+                <button>Nose</button>
+                <button>Lips</button>
+            </div>
+        </>
     );
 };
