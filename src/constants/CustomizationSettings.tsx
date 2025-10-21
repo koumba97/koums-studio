@@ -1,6 +1,10 @@
+import { SkinColor } from './ColorSettings';
+export type Settings = 'face' | 'hair' | 'eyebrows' | 'eyes' | 'nose' | 'lips';
+
 type Category = {
-    id: string;
+    id: Settings;
     name: string;
+    colorOptions?: string[];
     attributes: Attribute[];
 };
 
@@ -8,7 +12,7 @@ type Attribute = {
     id: string;
     name: string;
     type: 'color' | 'shape' | 'size';
-    options: Option[];
+    options: Option[] | string[];
 };
 
 type Option = {
@@ -17,21 +21,21 @@ type Option = {
     svgRef?: string;
 };
 
+export const settingList: { name: string; id: Settings }[] = [
+    { name: 'Face', id: 'face' },
+    { name: 'Hair', id: 'hair' },
+    { name: 'Eyebrows', id: 'eyebrows' },
+    { name: 'Nose', id: 'nose' },
+    { name: 'Lips', id: 'lips' },
+    { name: 'Eyes', id: 'eyes' },
+];
+
 export const CustomizationSettings: Category[] = [
     {
         id: 'face',
         name: 'Face',
+        colorOptions: SkinColor,
         attributes: [
-            {
-                id: 'skin-color',
-                name: 'Skin color',
-                type: 'color',
-                options: [
-                    { id: 'skin-color1', preview: '' },
-                    { id: 'skin-color2', preview: '' },
-                    { id: 'skin-color3', preview: '' },
-                ],
-            },
             {
                 id: 'face-shape',
                 name: 'Shape',
