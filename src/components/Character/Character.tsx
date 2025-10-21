@@ -15,18 +15,36 @@ import {
     settingList,
     Settings,
 } from '../../constants/CustomizationSettings';
+import { SkinColor } from '../../constants/ColorSettings';
 
 type CharacterProps = {
     color?: string;
 };
 
 export const Character = ({ color = 'black' }: CharacterProps) => {
+    const avatarDefaultColors: Record<Settings, string> = {
+        face: SkinColor[12],
+        hair: '',
+        eyes: '',
+        eyebrows: '',
+        nose: '',
+        lips: '',
+    };
     const [currentSetting, setCurrentSetting] = useState<Settings>('face');
+    const [skinColor, setSkinColor] = useState(SkinColor[12]);
+    const [avatarColors, setAvatarColors] = useState(avatarDefaultColors);
+
+    const handleColorChange = (setting: Settings, color: string) => {
+        const newAvatarColors = { ...avatarColors };
+        newAvatarColors[setting] = color;
+
+        setAvatarColors(newAvatarColors);
+    };
     return (
         <>
             <div>
                 <div className="character-container">
-                    <Skin color="#794e3d" />
+                    <Skin color={avatarColors.face} />
                     <FaceShape />
                     <EyeBrows color="blue" />
                     <EyesAlmond color="orange" />
@@ -55,7 +73,12 @@ export const Character = ({ color = 'black' }: CharacterProps) => {
                                 <>
                                     {setting.colorOptions ? (
                                         <ColorOptionContainer
+                                            setting={setting.id}
+                                            currentColor={
+                                                avatarColors[setting.id]
+                                            }
                                             colorList={setting.colorOptions}
+                                            onColorChange={handleColorChange}
                                         />
                                     ) : null}
                                     {
@@ -83,15 +106,24 @@ export const Character = ({ color = 'black' }: CharacterProps) => {
 };
 
 type ColorOptionProp = {
+    setting: Settings;
     colorList: string[];
+    currentColor: string;
+    onColorChange: (setting: Settings, color: string) => void;
 };
-const ColorOptionContainer = ({ colorList }: ColorOptionProp) => {
+const ColorOptionContainer = ({
+    setting,
+    colorList,
+    currentColor,
+    onColorChange,
+}: ColorOptionProp) => {
     return (
         <div className="colors-container">
             {colorList.map((color, i) => {
                 return (
-                    <div
-                        className="color-picker"
+                    <button
+                        className={`color-picker ${color === currentColor ? 'active' : null}`}
+                        onClick={() => onColorChange(setting, color)}
                         style={{
                             backgroundColor: color,
                         }}

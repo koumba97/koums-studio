@@ -1,4 +1,4 @@
-import { SkinColor } from './ColorSettings';
+import { hairColor, skinColor } from './ColorSettings';
 export type Settings = 'face' | 'hair' | 'eyebrows' | 'eyes' | 'nose' | 'lips';
 
 type Category = {
@@ -34,7 +34,7 @@ export const CustomizationSettings: Category[] = [
     {
         id: 'face',
         name: 'Face',
-        colorOptions: SkinColor,
+        colorOptions: skinColor,
         attributes: [
             {
                 id: 'face-shape',
@@ -51,6 +51,7 @@ export const CustomizationSettings: Category[] = [
     {
         id: 'hair',
         name: 'Hair',
+        colorOptions: hairColor,
         attributes: [
             {
                 id: 'hair-color',
