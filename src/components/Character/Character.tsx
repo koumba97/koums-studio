@@ -15,7 +15,11 @@ import {
     settingList,
     Settings,
 } from '../../constants/CustomizationSettings';
-import { SkinColor } from '../../constants/ColorSettings';
+import {
+    eyebrowsColor,
+    hairColor,
+    skinColor,
+} from '../../constants/ColorSettings';
 
 type CharacterProps = {
     color?: string;
@@ -23,15 +27,14 @@ type CharacterProps = {
 
 export const Character = ({ color = 'black' }: CharacterProps) => {
     const avatarDefaultColors: Record<Settings, string> = {
-        face: SkinColor[12],
-        hair: '',
-        eyes: '',
+        face: skinColor[12],
+        hair: hairColor[2],
+        eyes: eyebrowsColor[2],
         eyebrows: '',
         nose: '',
         lips: '',
     };
     const [currentSetting, setCurrentSetting] = useState<Settings>('face');
-    const [skinColor, setSkinColor] = useState(SkinColor[12]);
     const [avatarColors, setAvatarColors] = useState(avatarDefaultColors);
 
     const handleColorChange = (setting: Settings, color: string) => {
@@ -46,11 +49,11 @@ export const Character = ({ color = 'black' }: CharacterProps) => {
                 <div className="character-container">
                     <Skin color={avatarColors.face} />
                     <FaceShape />
-                    <EyeBrows color="blue" />
-                    <EyesAlmond color="orange" />
+                    <EyeBrows color={avatarColors.eyebrows} />
+                    <EyesAlmond color={avatarColors.eyes} />
                     <Nose />
-                    <Lips />
-                    <Hair color="pink" />
+                    <Lips color={avatarColors.lips} />
+                    <Hair color={avatarColors.hair} />
                 </div>
             </div>
             <div className="settings-container">

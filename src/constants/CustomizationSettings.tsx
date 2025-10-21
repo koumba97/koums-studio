@@ -1,4 +1,10 @@
-import { hairColor, skinColor } from './ColorSettings';
+import {
+    eyebrowsColor,
+    eyesColor,
+    hairColor,
+    lipsColor,
+    skinColor,
+} from './ColorSettings';
 export type Settings = 'face' | 'hair' | 'eyebrows' | 'eyes' | 'nose' | 'lips';
 
 type Category = {
@@ -54,16 +60,6 @@ export const CustomizationSettings: Category[] = [
         colorOptions: hairColor,
         attributes: [
             {
-                id: 'hair-color',
-                name: 'Hair color',
-                type: 'color',
-                options: [
-                    { id: 'hair-color1', preview: '' },
-                    { id: 'hair-color2', preview: '' },
-                    { id: 'hair-color3', preview: '' },
-                ],
-            },
-            {
                 id: 'hairstyle',
                 name: 'Hairstyle',
                 type: 'shape',
@@ -78,17 +74,8 @@ export const CustomizationSettings: Category[] = [
     {
         id: 'eyebrows',
         name: 'Eyebrows',
+        colorOptions: eyebrowsColor,
         attributes: [
-            {
-                id: 'eyebrows-color',
-                name: 'Eyebrows color',
-                type: 'color',
-                options: [
-                    { id: 'eyebrows-color1', preview: '' },
-                    { id: 'eyebrows-color2', preview: '' },
-                    { id: 'eyebrows-color3', preview: '' },
-                ],
-            },
             {
                 id: 'eyebrows-shape',
                 name: 'Eyebrows shape',
@@ -99,33 +86,13 @@ export const CustomizationSettings: Category[] = [
                     { id: 'eyebrows-shape3', preview: '', svgRef: '' },
                 ],
             },
-
-            {
-                id: 'eyebrows-size',
-                name: 'Eyebrows size',
-                type: 'size',
-                options: [
-                    { id: 'eyebrows-size1', preview: '', svgRef: '' },
-                    { id: 'eyebrows-size2', preview: '', svgRef: '' },
-                    { id: 'eyebrows-size3', preview: '', svgRef: '' },
-                ],
-            },
         ],
     },
     {
-        id: 'eyebrows',
-        name: 'Eyebrows',
+        id: 'eyes',
+        name: 'Eyes',
+        colorOptions: eyesColor,
         attributes: [
-            {
-                id: 'eyes-color',
-                name: 'Eyes color',
-                type: 'color',
-                options: [
-                    { id: 'eyes-color1', preview: '' },
-                    { id: 'eyes-color2', preview: '' },
-                    { id: 'eyes-color3', preview: '' },
-                ],
-            },
             {
                 id: 'eye-shape',
                 name: 'Eyes shape',
@@ -136,33 +103,12 @@ export const CustomizationSettings: Category[] = [
                     { id: 'eyes-shape3', preview: '', svgRef: '' },
                 ],
             },
-
-            {
-                id: 'eyes-size',
-                name: 'Eyes size',
-                type: 'size',
-                options: [
-                    { id: 'eyes-size1', preview: '', svgRef: '' },
-                    { id: 'eyes-size2', preview: '', svgRef: '' },
-                    { id: 'eyes-size3', preview: '', svgRef: '' },
-                ],
-            },
         ],
     },
     {
         id: 'nose',
         name: 'Nose',
         attributes: [
-            {
-                id: 'nose-size',
-                name: 'Nose size',
-                type: 'size',
-                options: [
-                    { id: 'nose-size1', preview: '', svgRef: '' },
-                    { id: 'nose-size2', preview: '', svgRef: '' },
-                    { id: 'nose-size3', preview: '', svgRef: '' },
-                ],
-            },
             {
                 id: 'nose-shape',
                 name: 'Nose shape',
@@ -178,17 +124,8 @@ export const CustomizationSettings: Category[] = [
     {
         id: 'lips',
         name: 'Lips',
+        colorOptions: lipsColor,
         attributes: [
-            {
-                id: 'lips-color',
-                name: 'Lips color',
-                type: 'color',
-                options: [
-                    { id: 'lips-color1', preview: '' },
-                    { id: 'lips-color2', preview: '' },
-                    { id: 'lips-color3', preview: '' },
-                ],
-            },
             {
                 id: 'lips-shape',
                 name: 'Lips shape',

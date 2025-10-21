@@ -1,6 +1,8 @@
-interface Prop {}
+interface Prop {
+    color: string;
+}
 
-const Lips = ({}: Prop) => (
+const Lips = ({ color }: Prop) => (
     <svg
         id="Calque_1"
         data-name="Calque 1"
