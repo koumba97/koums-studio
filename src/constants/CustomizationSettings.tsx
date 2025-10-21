@@ -18,10 +18,10 @@ type Attribute = {
     id: string;
     name: string;
     type: 'color' | 'shape' | 'size';
-    options: Option[] | string[];
+    options: Option[];
 };
 
-type Option = {
+export type Option = {
     id: string;
     preview: string;
     svgRef?: string;
@@ -64,9 +64,9 @@ export const CustomizationSettings: Category[] = [
                 name: 'Hairstyle',
                 type: 'shape',
                 options: [
-                    { id: 'hairstyle1', preview: '', svgRef: '' },
-                    { id: 'hairstyle2', preview: '', svgRef: '' },
-                    { id: 'hairstyle3', preview: '', svgRef: '' },
+                    { id: 'hair-1', preview: '', svgRef: '' },
+                    { id: 'hair-2', preview: '', svgRef: '' },
+                    { id: 'hair-3', preview: '', svgRef: '' },
                 ],
             },
         ],

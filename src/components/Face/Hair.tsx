@@ -1,5 +1,5 @@
 interface Prop {
-    color: string;
+    color?: string;
 }
 
 const Hair = ({ color }: Prop) => (

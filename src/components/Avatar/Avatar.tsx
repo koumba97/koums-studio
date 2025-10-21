@@ -9,51 +9,93 @@ import Hair from '../Face/Hair';
 import Lips from '../Face/Lips';
 import Nose from '../Face/Nose';
 import Skin from '../Face/Skin';
-import './Character.scss';
+import './Avatar.scss';
 import {
     CustomizationSettings,
+    Option,
     settingList,
     Settings,
 } from '../../constants/CustomizationSettings';
 import {
     eyebrowsColor,
+    eyesColor,
     hairColor,
+    lipsColor,
     skinColor,
 } from '../../constants/ColorSettings';
+import HairBack from '../Face/HairBack';
+import HairFront from '../Face/HairFront';
 
 type CharacterProps = {
     color?: string;
 };
 
-export const Character = ({ color = 'black' }: CharacterProps) => {
-    const avatarDefaultColors: Record<Settings, string> = {
-        face: skinColor[12],
-        hair: hairColor[2],
-        eyes: eyebrowsColor[2],
-        eyebrows: '',
-        nose: '',
-        lips: '',
+export const Avatar = ({ color = 'black' }: CharacterProps) => {
+    const avatarDefaultSettings: Record<
+        Settings,
+        { color?: string; id: string }
+    > = {
+        face: {
+            color: skinColor[12],
+            id: 'face-1',
+        },
+        hair: {
+            color: hairColor[2],
+            id: 'hair-2',
+        },
+
+        eyes: {
+            color: eyesColor[2],
+            id: 'eyes-1',
+        },
+        eyebrows: {
+            color: eyebrowsColor[2],
+            id: 'eyebrows-1',
+        },
+        nose: {
+            id: 'nose-1',
+        },
+        lips: {
+            color: lipsColor[2],
+            id: 'lips-1',
+        },
     };
     const [currentSetting, setCurrentSetting] = useState<Settings>('face');
-    const [avatarColors, setAvatarColors] = useState(avatarDefaultColors);
+    const [avatarUserSettings, setAvatarUserSettings] = useState(
+        avatarDefaultSettings
+    );
 
     const handleColorChange = (setting: Settings, color: string) => {
-        const newAvatarColors = { ...avatarColors };
-        newAvatarColors[setting] = color;
+        const newAvatarSettings = { ...avatarDefaultSettings };
+        newAvatarSettings[setting].color = color;
 
-        setAvatarColors(newAvatarColors);
+        setAvatarUserSettings(newAvatarSettings);
+    };
+
+    const handleShapeChange = (setting: Settings, shape: string) => {
+        const newAvatarSettings = { ...avatarDefaultSettings };
+        newAvatarSettings[setting].id = shape;
+
+        setAvatarUserSettings(newAvatarSettings);
     };
     return (
         <>
             <div>
-                <div className="character-container">
-                    <Skin color={avatarColors.face} />
+                <div className="avatar-container">
+                    <HairBack
+                        color={avatarUserSettings.hair.color}
+                        id={avatarUserSettings.hair.id}
+                    />
+                    <Skin color={avatarUserSettings.face.color} />
                     <FaceShape />
-                    <EyeBrows color={avatarColors.eyebrows} />
-                    <EyesAlmond color={avatarColors.eyes} />
+                    <EyeBrows color={avatarUserSettings.eyebrows.color} />
+                    <EyesAlmond color={avatarUserSettings.eyes.color} />
                     <Nose />
-                    <Lips color={avatarColors.lips} />
-                    <Hair color={avatarColors.hair} />
+                    <Lips color={avatarUserSettings.lips.color} />
+                    <HairFront
+                        color={avatarUserSettings.hair.color}
+                        id={avatarUserSettings.hair.id}
+                    />
                 </div>
             </div>
             <div className="settings-container">
@@ -78,7 +120,8 @@ export const Character = ({ color = 'black' }: CharacterProps) => {
                                         <ColorOptionContainer
                                             setting={setting.id}
                                             currentColor={
-                                                avatarColors[setting.id]
+                                                avatarUserSettings[setting.id]
+                                                    .color
                                             }
                                             colorList={setting.colorOptions}
                                             onColorChange={handleColorChange}
@@ -88,10 +131,18 @@ export const Character = ({ color = 'black' }: CharacterProps) => {
                                         setting.attributes.length === 1 ? (
                                             <div className="shapes-container">
                                                 {setting.attributes[0].options.map(
-                                                    (option) => (
-                                                        <div
-                                                            key={option.id}
-                                                            className="shape-picker"
+                                                    (option, i) => (
+                                                        <ShapeOptionContainer
+                                                            currentShape={
+                                                                avatarUserSettings[
+                                                                    setting.id
+                                                                ].id
+                                                            }
+                                                            setting={setting.id}
+                                                            option={option}
+                                                            onShapeChange={
+                                                                handleShapeChange
+                                                            }
                                                         />
                                                     )
                                                 )}
@@ -111,7 +162,7 @@ export const Character = ({ color = 'black' }: CharacterProps) => {
 type ColorOptionProp = {
     setting: Settings;
     colorList: string[];
-    currentColor: string;
+    currentColor?: string;
     onColorChange: (setting: Settings, color: string) => void;
 };
 const ColorOptionContainer = ({
@@ -134,5 +185,27 @@ const ColorOptionContainer = ({
                 );
             })}
         </div>
+    );
+};
+
+type ShapeOptionProp = {
+    setting: Settings;
+    option: Option;
+    currentShape?: string;
+    onShapeChange: (setting: Settings, shape: string) => void;
+};
+const ShapeOptionContainer = ({
+    setting,
+    option,
+    currentShape,
+    onShapeChange,
+}: ShapeOptionProp) => {
+    return (
+        <button
+            className={`shape-picker ${option.id === currentShape ? 'active' : null}`}
+            onClick={() => onShapeChange(setting, option.id)}
+        >
+            {option.id}
+        </button>
     );
 };
