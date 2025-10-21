@@ -1,11 +1,9 @@
 /// <reference types="vite-plugin-svgr/client" />
 
 import { useState } from 'react';
-import Face from '../assets/face.svg?react';
 import EyesAlmond from '../Face/EyesAlmond';
 import EyeBrows from '../Face/EyesBrows';
 import FaceShape from '../Face/FaceShape';
-import Hair from '../Face/Hair';
 import Lips from '../Face/Lips';
 import Nose from '../Face/Nose';
 import Skin from '../Face/Skin';
@@ -66,14 +64,14 @@ export const Avatar = ({ color = 'black' }: CharacterProps) => {
     );
 
     const handleColorChange = (setting: Settings, color: string) => {
-        const newAvatarSettings = { ...avatarDefaultSettings };
+        const newAvatarSettings = { ...avatarUserSettings };
         newAvatarSettings[setting].color = color;
 
         setAvatarUserSettings(newAvatarSettings);
     };
 
     const handleShapeChange = (setting: Settings, shape: string) => {
-        const newAvatarSettings = { ...avatarDefaultSettings };
+        const newAvatarSettings = { ...avatarUserSettings };
         newAvatarSettings[setting].id = shape;
 
         setAvatarUserSettings(newAvatarSettings);
@@ -117,15 +115,20 @@ export const Avatar = ({ color = 'black' }: CharacterProps) => {
                             return (
                                 <>
                                     {setting.colorOptions ? (
-                                        <ColorOptionContainer
-                                            setting={setting.id}
-                                            currentColor={
-                                                avatarUserSettings[setting.id]
-                                                    .color
-                                            }
-                                            colorList={setting.colorOptions}
-                                            onColorChange={handleColorChange}
-                                        />
+                                        <div className="colors-container">
+                                            <ColorOptionContainer
+                                                setting={setting.id}
+                                                currentColor={
+                                                    avatarUserSettings[
+                                                        setting.id
+                                                    ].color
+                                                }
+                                                colorList={setting.colorOptions}
+                                                onColorChange={
+                                                    handleColorChange
+                                                }
+                                            />
+                                        </div>
                                     ) : null}
                                     {
                                         setting.attributes.length === 1 ? (
@@ -172,7 +175,7 @@ const ColorOptionContainer = ({
     onColorChange,
 }: ColorOptionProp) => {
     return (
-        <div className="colors-container">
+        <>
             {colorList.map((color, i) => {
                 return (
                     <button
@@ -184,7 +187,12 @@ const ColorOptionContainer = ({
                     />
                 );
             })}
-        </div>
+
+            <input
+                type="color"
+                onChange={(e) => onColorChange(setting, e.target.value)}
+            />
+        </>
     );
 };
 
