@@ -67,6 +67,7 @@ export const CustomizationSettings: Category[] = [
                     { id: 'hair-1', preview: '', svgRef: '' },
                     { id: 'hair-2', preview: '', svgRef: '' },
                     { id: 'hair-3', preview: '', svgRef: '' },
+                    { id: 'hair-4', preview: '', svgRef: '' },
                 ],
             },
         ],

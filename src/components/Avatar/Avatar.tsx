@@ -110,6 +110,7 @@ export const Avatar = ({ color = 'black' }: CharacterProps) => {
                     );
                 })}
                 <div className="setting-options">
+                    {avatarUserSettings.hair.id}
                     {CustomizationSettings.map((setting) => {
                         if (setting.id === currentSetting) {
                             return (
