@@ -1,0 +1,82 @@
+.card {
+    padding: 2em;
+    border: solid;
+}
+
+.control-container {
+    align-items: center;
+    border-radius: 40px 40px 0 0;
+    background-color: white;
+    margin-top: auto;
+    padding: 20px 40px 50px 40px;
+}
+.tabs-container {
+    margin: auto;
+    width: 100%;
+}
+.setting-tab {
+    font-family: Nunito;
+    color: #9b9b9b;
+    background-color: unset;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 10px;
+    font-weight: 500;
+    max-width: auto;
+    transition:
+        color 0.3s,
+        font-weight 0.3s;
+    &::after {
+        content: attr(data-text);
+        visibility: hidden;
+        font-weight: 700;
+        height: 0;
+        display: block;
+        overflow: hidden;
+    }
+    &:not(.active):hover {
+        color: rgb(55, 55, 55);
+        font-weight: 700;
+    }
+    &.active {
+        color: #3959f8;
+        font-weight: 700;
+    }
+}
+
+.colors-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    .color-picker {
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+        border: none;
+        transition: 0.3s scale;
+
+        &.active {
+            outline: 2px solid #3959f8;
+            outline-offset: 2px;
+        }
+
+        &:active {
+            scale: 0.95;
+        }
+    }
+}
+
+.shapes-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    .shape-picker {
+        height: 90px;
+        width: 90px;
+        border-radius: 10px;
+        border: solid 2px;
+    }
+}
