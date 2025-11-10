@@ -17,25 +17,23 @@ type AvatarProps = {
 
 export const Avatar = ({ avatarUserSettings }: AvatarProps) => {
     return (
-        <>
-            <div>
-                <div className="avatar-container">
-                    <HairBack
-                        color={avatarUserSettings.hair.color}
-                        id={avatarUserSettings.hair.id}
-                    />
-                    <Skin color={avatarUserSettings.face.color} />
-                    <FaceShape />
-                    <EyeBrows color={avatarUserSettings.eyebrows.color} />
-                    <EyesAlmond color={avatarUserSettings.eyes.color} />
-                    <Nose />
-                    <Lips color={avatarUserSettings.lips.color} />
-                    <HairFront
-                        color={avatarUserSettings.hair.color}
-                        id={avatarUserSettings.hair.id}
-                    />
-                </div>
-            </div>
-        </>
+        <div>
+            <div className="avatar-container">
+                <HairBack
+                    color={avatarUserSettings.hair.color}
+                    id={avatarUserSettings.hair.id}
+                />
+                <Skin color={avatarUserSettings.face.color} />
+                <FaceShape />
+                <EyeBrows color={avatarUserSettings.eyebrows.color} />
+                <EyesAlmond color={avatarUserSettings.eyes.color} />
+                <Nose />
+                <Lips color={avatarUserSettings.lips.color} />
+                <HairFront
+                    color={avatarUserSettings.hair.color}
+                    id={avatarUserSettings.hair.id}
+                />
+            </div>{' '}
+        </div>
     );
 };
