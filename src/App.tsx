@@ -84,10 +84,10 @@ function App() {
                     })}
                 </div>
                 <div className="setting-options">
-                    {CustomizationSettings.map((setting) => {
+                    {CustomizationSettings.map((setting, index) => {
                         if (setting.id === currentSetting) {
                             return (
-                                <>
+                                <div key={index}>
                                     {setting.colorOptions ? (
                                         <div className="colors-container">
                                             <ColorOptionContainer
@@ -120,13 +120,14 @@ function App() {
                                                             onShapeChange={
                                                                 handleShapeChange
                                                             }
+                                                            key={`setting-${i}`}
                                                         />
                                                     )
                                                 )}
                                             </div>
                                         ) : null // handle multiple attributes here
                                     }
-                                </>
+                                </div>
                             );
                         }
                     })}
@@ -158,12 +159,14 @@ const ColorOptionContainer = ({
                         style={{
                             backgroundColor: color,
                         }}
+                        key={`color-${color}`}
                     />
                 );
             })}
 
             <input
                 type="color"
+                className="free-color-picker"
                 onChange={(e) => onColorChange(setting, e.target.value)}
             />
         </>

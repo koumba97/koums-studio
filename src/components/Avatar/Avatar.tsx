@@ -1,15 +1,15 @@
 /// <reference types="vite-plugin-svgr/client" />
 
-import EyesAlmond from '../Face/EyesAlmond';
-import EyeBrows from '../Face/EyesBrows';
-import FaceShape from '../Face/FaceShape';
-import Lips from '../Face/Lips';
-import Nose from '../Face/Nose';
-import Skin from '../Face/Skin';
+import EyesAlmond from '../Settings/EyesAlmond';
+import EyeBrows from '../Settings/EyesBrows';
+import FaceShape from '../Settings/FaceShape';
+import Lips from '../Settings/Lips';
+import Nose from '../Settings/Nose';
+import Skin from '../Settings/Skin';
 import './Avatar.scss';
 import { Settings } from '../../constants/CustomizationSettings';
-import HairBack from '../Face/HairBack';
-import HairFront from '../Face/HairFront';
+import HairBack from '../Settings/HairBack';
+import HairFront from '../Settings/HairFront';
 
 type AvatarProps = {
     avatarUserSettings: Record<Settings, { color?: string; id: string }>;

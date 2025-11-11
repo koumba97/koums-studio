@@ -20,16 +20,16 @@ const Lips = ({ color }: Prop) => (
                 r="52.65"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset="0" stop-color={color} />
-                <stop offset=".29" stop-color={color} stop-opacity=".99" />
-                <stop offset=".44" stop-color={color} stop-opacity=".95" />
-                <stop offset=".55" stop-color={color} stop-opacity=".89" />
-                <stop offset=".65" stop-color={color} stop-opacity=".8" />
-                <stop offset=".73" stop-color={color} stop-opacity=".69" />
-                <stop offset=".81" stop-color={color} stop-opacity=".55" />
-                <stop offset=".88" stop-color={color} stop-opacity=".38" />
-                <stop offset=".94" stop-color={color} stop-opacity=".2" />
-                <stop offset="1" stop-color={color} stop-opacity="0" />
+                <stop offset="0" stopColor={color} />
+                <stop offset=".29" stopColor={color} stopOpacity=".99" />
+                <stop offset=".44" stopColor={color} stopOpacity=".95" />
+                <stop offset=".55" stopColor={color} stopOpacity=".89" />
+                <stop offset=".65" stopColor={color} stopOpacity=".8" />
+                <stop offset=".73" stopColor={color} stopOpacity=".69" />
+                <stop offset=".81" stopColor={color} stopOpacity=".55" />
+                <stop offset=".88" stopColor={color} stopOpacity=".38" />
+                <stop offset=".94" stopColor={color} stopOpacity=".2" />
+                <stop offset="1" stopColor={color} stopOpacity="0" />
             </radialGradient>
             <radialGradient
                 id="Dégradé_sans_nom_151"
@@ -41,16 +41,16 @@ const Lips = ({ color }: Prop) => (
                 r="50.31"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset="0" stop-color={color} />
-                <stop offset=".29" stop-color={color} stop-opacity=".99" />
-                <stop offset=".44" stop-color={color} stop-opacity=".95" />
-                <stop offset=".55" stop-color={color} stop-opacity=".89" />
-                <stop offset=".65" stop-color={color} stop-opacity=".8" />
-                <stop offset=".73" stop-color={color} stop-opacity=".69" />
-                <stop offset=".81" stop-color={color} stop-opacity=".55" />
-                <stop offset=".88" stop-color={color} stop-opacity=".38" />
-                <stop offset=".94" stop-color={color} stop-opacity=".2" />
-                <stop offset="1" stop-color={color} stop-opacity="0" />
+                <stop offset="0" stopColor={color} />
+                <stop offset=".29" stopColor={color} stopOpacity=".99" />
+                <stop offset=".44" stopColor={color} stopOpacity=".95" />
+                <stop offset=".55" stopColor={color} stopOpacity=".89" />
+                <stop offset=".65" stopColor={color} stopOpacity=".8" />
+                <stop offset=".73" stopColor={color} stopOpacity=".69" />
+                <stop offset=".81" stopColor={color} stopOpacity=".55" />
+                <stop offset=".88" stopColor={color} stopOpacity=".38" />
+                <stop offset=".94" stopColor={color} stopOpacity=".2" />
+                <stop offset="1" stopColor={color} stopOpacity="0" />
             </radialGradient>
         </defs>
         <path
