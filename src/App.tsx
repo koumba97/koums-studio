@@ -38,7 +38,7 @@ function App() {
             id: 'eyebrows-1',
         },
         nose: {
-            id: 'nose-1',
+            id: 'nose-shape-1',
         },
         lips: {
             color: lipsColor[2],
