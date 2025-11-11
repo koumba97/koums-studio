@@ -8,6 +8,7 @@ import {
 } from './constants/ColorSettings';
 import './App.scss';
 import { Avatar } from './components/Avatar/Avatar';
+import ColorGradient from './assets/gradient.jpeg';
 import {
     CustomizationSettings,
     settingList,
@@ -164,9 +165,24 @@ const ColorOptionContainer = ({
                 );
             })}
 
+            <label
+                htmlFor="color-picker"
+                className={`color-picker free-color-picker ${!colorList.includes(currentColor!) ? 'active' : null}`}
+                style={{
+                    backgroundColor: !colorList.includes(currentColor!)
+                        ? currentColor
+                        : undefined,
+                    backgroundImage: !colorList.includes(currentColor!)
+                        ? undefined
+                        : `url(${ColorGradient})`,
+                }}
+            >
+                <div className="icon"></div>
+            </label>
             <input
                 type="color"
-                className="free-color-picker"
+                name="color-picker"
+                id="color-picker"
                 onChange={(e) => onColorChange(setting, e.target.value)}
             />
         </>

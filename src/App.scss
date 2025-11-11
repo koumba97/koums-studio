@@ -67,10 +67,30 @@
             scale: 0.95;
         }
     }
+    #color-picker {
+        width: 0;
+        padding: 0;
+        border: none;
+    }
     .free-color-picker {
         height: 40px;
         width: 40px;
-        border: solid;
+        background-size: cover;
+        display: block;
+        .icon {
+            width: 20px;
+            height: 20px;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: white;
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-image: url('./assets//magic-wand.png');
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
 }
 
