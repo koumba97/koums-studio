@@ -72,19 +72,23 @@ function App() {
             <Avatar avatarUserSettings={avatarUserSettings} />
 
             <div className="control-container">
-                <div className="tabs-container">
-                    {settingList.map((setting, i) => {
-                        return (
-                            <button
-                                className={`setting-tab ${currentSetting === setting.id ? 'active' : ''}`}
-                                key={setting.id}
-                                data-text={setting.name}
-                                onClick={() => setCurrentSetting(setting.id)}
-                            >
-                                {setting.name}
-                            </button>
-                        );
-                    })}
+                <div className="scroll">
+                    <div className="tabs-container">
+                        {settingList.map((setting, i) => {
+                            return (
+                                <button
+                                    className={`setting-tab ${currentSetting === setting.id ? 'active' : ''}`}
+                                    key={setting.id}
+                                    data-text={setting.name}
+                                    onClick={() =>
+                                        setCurrentSetting(setting.id)
+                                    }
+                                >
+                                    {setting.name}
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
                 <div className="setting-options">
                     {CustomizationSettings.map((setting, index) => {
@@ -92,41 +96,50 @@ function App() {
                             return (
                                 <div key={index}>
                                     {setting.colorOptions ? (
-                                        <div className="colors-container">
-                                            <ColorOptionContainer
-                                                setting={setting.id}
-                                                currentColor={
-                                                    avatarUserSettings[
-                                                        setting.id
-                                                    ].color
-                                                }
-                                                colorList={setting.colorOptions}
-                                                onColorChange={
-                                                    handleColorChange
-                                                }
-                                            />
+                                        <div className="scroll">
+                                            <div className="colors-container">
+                                                <ColorOptionContainer
+                                                    setting={setting.id}
+                                                    currentColor={
+                                                        avatarUserSettings[
+                                                            setting.id
+                                                        ].color
+                                                    }
+                                                    colorList={
+                                                        setting.colorOptions
+                                                    }
+                                                    onColorChange={
+                                                        handleColorChange
+                                                    }
+                                                />
+                                            </div>
                                         </div>
                                     ) : null}
                                     {
                                         setting.attributes.length === 1 ? (
-                                            <div className="shapes-container">
-                                                {setting.attributes[0].options.map(
-                                                    (option, i) => (
-                                                        <ShapeOptionContainer
-                                                            currentShape={
-                                                                avatarUserSettings[
+                                            <div className="scroll">
+                                                <div className="shapes-container">
+                                                    {setting.attributes[0].options.map(
+                                                        (option, i) => (
+                                                            <ShapeOptionContainer
+                                                                currentShape={
+                                                                    avatarUserSettings[
+                                                                        setting
+                                                                            .id
+                                                                    ].id
+                                                                }
+                                                                setting={
                                                                     setting.id
-                                                                ].id
-                                                            }
-                                                            setting={setting.id}
-                                                            option={option}
-                                                            onShapeChange={
-                                                                handleShapeChange
-                                                            }
-                                                            key={`setting-${i}`}
-                                                        />
-                                                    )
-                                                )}
+                                                                }
+                                                                option={option}
+                                                                onShapeChange={
+                                                                    handleShapeChange
+                                                                }
+                                                                key={`setting-${i}`}
+                                                            />
+                                                        )
+                                                    )}
+                                                </div>
                                             </div>
                                         ) : null // handle multiple attributes here
                                     }

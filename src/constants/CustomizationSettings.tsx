@@ -4,10 +4,17 @@ import hair3 from '../assets/thumbnails/hair/hair3.jpg';
 import hair4 from '../assets/thumbnails/hair/hair4.jpg';
 import hair5 from '../assets/thumbnails/hair/hair5.jpg';
 import hair6 from '../assets/thumbnails/hair/hair6.jpg';
+import hair7 from '../assets/thumbnails/hair/hair7.jpg';
 import face1 from '../assets/thumbnails/face/face1.jpg';
 import face2 from '../assets/thumbnails/face/face2.jpg';
 import face3 from '../assets/thumbnails/face/face3.jpg';
 import face4 from '../assets/thumbnails/face/face4.jpg';
+import eyebrows1 from '../assets/thumbnails/eyebrows/eyebrows1.jpg';
+import eyebrows2 from '../assets/thumbnails/eyebrows/eyebrows2.jpg';
+import eyebrows3 from '../assets/thumbnails/eyebrows/eyebrows3.jpg';
+import eyebrows4 from '../assets/thumbnails/eyebrows/eyebrows4.jpg';
+import eyebrows5 from '../assets/thumbnails/eyebrows/eyebrows5.jpg';
+import eyebrows6 from '../assets/thumbnails/eyebrows/eyebrows6.jpg';
 import {
     eyebrowsColor,
     eyesColor,
@@ -81,6 +88,7 @@ export const CustomizationSettings: Category[] = [
                     { id: 'hair-4', preview: hair4, svgRef: '' },
                     { id: 'hair-5', preview: hair5, svgRef: '' },
                     { id: 'hair-6', preview: hair6, svgRef: '' },
+                    { id: 'hair-7', preview: hair7, svgRef: '' },
                 ],
             },
         ],
@@ -95,9 +103,12 @@ export const CustomizationSettings: Category[] = [
                 name: 'Eyebrows shape',
                 type: 'shape',
                 options: [
-                    { id: 'eyebrows-shape1', preview: '', svgRef: '' },
-                    { id: 'eyebrows-shape2', preview: '', svgRef: '' },
-                    { id: 'eyebrows-shape3', preview: '', svgRef: '' },
+                    { id: 'eyebrows-shape1', preview: eyebrows1, svgRef: '' },
+                    { id: 'eyebrows-shape2', preview: eyebrows2, svgRef: '' },
+                    { id: 'eyebrows-shape3', preview: eyebrows3, svgRef: '' },
+                    { id: 'eyebrows-shape4', preview: eyebrows4, svgRef: '' },
+                    { id: 'eyebrows-shape5', preview: eyebrows5, svgRef: '' },
+                    { id: 'eyebrows-shape6', preview: eyebrows6, svgRef: '' },
                 ],
             },
         ],

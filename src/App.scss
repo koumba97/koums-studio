@@ -7,9 +7,9 @@
     position: absolute;
 }
 .control-container {
-    height: 30vh;
+    height: 100%;
     max-width: 1400px;
-    width: 100%;
+    //width: 100%;
     align-items: center;
     border-radius: 40px 40px 0 0;
     background-color: white;
@@ -20,9 +20,21 @@
     position: relative;
     top: -130px;
 }
+.scroll {
+    width: calc(100vw - 20px);
+    overflow: scroll;
+    margin-bottom: 10px;
+    padding: 4px 0 0 20px;
+    margin: 0 -40px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
 .tabs-container {
-    margin: auto;
-    width: 100%;
+    margin: 10px auto;
+    width: 100vw;
+    display: flex;
+    gap: 20px;
 }
 .setting-tab {
     font-family: Nunito;
@@ -31,7 +43,7 @@
     font-size: 20px;
     border: none;
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 0px;
     font-weight: 500;
     max-width: auto;
     transition:
@@ -58,7 +70,8 @@
 .colors-container {
     margin-bottom: 20px;
     display: flex;
-    flex-direction: row;
+    width: fit-content;
+
     gap: 10px;
 
     .color-picker {
@@ -66,7 +79,10 @@
         width: 40px;
         border-radius: 10px;
         border: none;
-        transition: 0.3s scale;
+        transition:
+            0.3s scale,
+            0.3s opacity;
+        cursor: pointer;
 
         &.active {
             outline: 2px solid #3959f8;
@@ -75,6 +91,9 @@
 
         &:active {
             scale: 0.95;
+        }
+        &:hover {
+            opacity: 0.8;
         }
     }
     #color-picker {
@@ -108,10 +127,30 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+    display: flex;
+    width: fit-content;
+    padding: 4px 0;
+
+    gap: 10px;
     .shape-picker {
         height: 90px;
         width: 90px;
         border-radius: 10px;
-        border: solid 2px;
+        border: none;
+        transition:
+            0.3s scale,
+            0.3s opacity;
+        cursor: pointer;
+        &.active {
+            outline: 2px solid #3959f8;
+            outline-offset: 2px;
+        }
+
+        &:active {
+            scale: 0.95;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }

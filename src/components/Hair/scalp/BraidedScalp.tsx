@@ -12,7 +12,7 @@ const BraidedScalp = ({ color }: Prop) => (
         <g>
             <Paths color={color} />
         </g>
-        <g style={{ opacity: 0.4 }}>
+        <g style={{ opacity: 0.6 }}>
             <Paths color="black" />
         </g>
         <path
