@@ -148,6 +148,7 @@ function App() {
                         }
                     })}
                 </div>
+                <p className="with-love">Made with 🩷 by Koum</p>
             </div>
         </>
     );

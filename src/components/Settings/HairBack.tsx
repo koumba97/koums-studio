@@ -1,3 +1,5 @@
+import Afro from '../Hair/Style/Afro';
+import AfroPuffs from '../Hair/Style/AfroPuffs';
 import Bob from '../Hair/Style/Bob';
 import Braids from '../Hair/Style/Braids';
 import Straight from '../Hair/Style/Straight';
@@ -25,6 +27,10 @@ const HairBack = ({ color, id = 'hair-1' }: Prop) => (
             <Bob color={color} />
         ) : id === 'hair-5' ? (
             <Braids color={color} />
+        ) : id === 'hair-6' ? (
+            <Afro color={color} />
+        ) : id === 'hair-7' ? (
+            <AfroPuffs color={color} />
         ) : undefined}
     </svg>
 );
