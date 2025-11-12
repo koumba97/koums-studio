@@ -24,7 +24,7 @@ export const Avatar = ({ avatarUserSettings }: AvatarProps) => {
                     id={avatarUserSettings.hair.id}
                 />
                 <Skin color={avatarUserSettings.face.color} />
-                <FaceShape />
+                <FaceShape color={avatarUserSettings.face.color} />
                 <EyeBrows color={avatarUserSettings.eyebrows.color} />
                 <EyesAlmond color={avatarUserSettings.eyes.color} />
                 <Nose id={avatarUserSettings.nose.id} />

@@ -9,6 +9,7 @@ import {
 import './App.scss';
 import { Avatar } from './components/Avatar/Avatar';
 import ColorGradient from './assets/gradient.jpeg';
+import KoumsStudio from './assets/koums-studio-logo.png';
 import {
     CustomizationSettings,
     settingList,
@@ -67,6 +68,7 @@ function App() {
     };
     return (
         <>
+            <img src={KoumsStudio} className="koums-studio-logo" />
             <Avatar avatarUserSettings={avatarUserSettings} />
 
             <div className="control-container">
@@ -183,6 +185,7 @@ const ColorOptionContainer = ({
                 type="color"
                 name="color-picker"
                 id="color-picker"
+                value={currentColor}
                 onChange={(e) => onColorChange(setting, e.target.value)}
             />
         </>
@@ -205,9 +208,12 @@ const ShapeOptionContainer = ({
         <button
             className={`shape-picker ${option.id === currentShape ? 'active' : null}`}
             onClick={() => onShapeChange(setting, option.id)}
-        >
-            {option.id}
-        </button>
+            style={{
+                backgroundImage: `url(${option.preview})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
+        ></button>
     );
 };
 

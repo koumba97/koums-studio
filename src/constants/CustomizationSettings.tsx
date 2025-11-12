@@ -1,3 +1,13 @@
+import hair1 from '../assets/thumbnails/hair/hair1.jpg';
+import hair2 from '../assets/thumbnails/hair/hair2.jpg';
+import hair3 from '../assets/thumbnails/hair/hair3.jpg';
+import hair4 from '../assets/thumbnails/hair/hair4.jpg';
+import hair5 from '../assets/thumbnails/hair/hair5.jpg';
+import hair6 from '../assets/thumbnails/hair/hair6.jpg';
+import face1 from '../assets/thumbnails/face/face1.jpg';
+import face2 from '../assets/thumbnails/face/face2.jpg';
+import face3 from '../assets/thumbnails/face/face3.jpg';
+import face4 from '../assets/thumbnails/face/face4.jpg';
 import {
     eyebrowsColor,
     eyesColor,
@@ -23,7 +33,7 @@ type Attribute = {
 
 export type Option = {
     id: string;
-    preview: string;
+    preview: any;
     svgRef?: string;
 };
 
@@ -47,9 +57,10 @@ export const CustomizationSettings: Category[] = [
                 name: 'Shape',
                 type: 'shape',
                 options: [
-                    { id: 'face-shape1', preview: '', svgRef: '' },
-                    { id: 'face-shape2', preview: '', svgRef: '' },
-                    { id: 'face-shape3', preview: '', svgRef: '' },
+                    { id: 'face-shape1', preview: face1, svgRef: '' },
+                    { id: 'face-shape2', preview: face2, svgRef: '' },
+                    { id: 'face-shape3', preview: face3, svgRef: '' },
+                    { id: 'face-shape4', preview: face4, svgRef: '' },
                 ],
             },
         ],
@@ -64,11 +75,12 @@ export const CustomizationSettings: Category[] = [
                 name: 'Hairstyle',
                 type: 'shape',
                 options: [
-                    { id: 'hair-1', preview: '', svgRef: '' },
-                    { id: 'hair-2', preview: '', svgRef: '' },
-                    { id: 'hair-3', preview: '', svgRef: '' },
-                    { id: 'hair-4', preview: '', svgRef: '' },
-                    { id: 'hair-5', preview: '', svgRef: '' },
+                    { id: 'hair-1', preview: hair1, svgRef: '' },
+                    { id: 'hair-2', preview: hair2, svgRef: '' },
+                    { id: 'hair-3', preview: hair3, svgRef: '' },
+                    { id: 'hair-4', preview: hair4, svgRef: '' },
+                    { id: 'hair-5', preview: hair5, svgRef: '' },
+                    { id: 'hair-6', preview: hair6, svgRef: '' },
                 ],
             },
         ],

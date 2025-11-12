@@ -1,6 +1,6 @@
-import BraidedScalp from '../Hair/scalp/BraidedScalp';
-import DefaultScalp from '../Hair/scalp/DefaultScalp';
-import MiddlePart from '../Hair/scalp/MiddlePart';
+import BraidedScalp from '../Hair/Scalp/BraidedScalp';
+import DefaultScalp from '../Hair/Scalp/DefaultScalp';
+import MiddlePart from '../Hair/Scalp/MiddlePart';
 
 interface Prop {
     color?: string;

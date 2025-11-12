@@ -1,7 +1,8 @@
 .avatar-container {
-    height: 100%;
+    //height: 70%;
     max-width: 500px;
-    max-height: 500px;
+    //max-height: 500px;
+    border: solid;
     position: relative;
     margin: auto;
     svg {
@@ -10,6 +11,6 @@
         }
         position: absolute;
         left: 0;
-        top: -160px;
+        top: -130px;
     }
 }
