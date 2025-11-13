@@ -8,7 +8,7 @@ import './Avatar.scss';
 import { Settings } from '../../constants/CustomizationSettings';
 import HairBack from '../Settings/HairBack';
 import HairFront from '../Settings/HairFront';
-import Eyebrows from '../Settings/Eyesbrows';
+import Eyebrows from '../Settings/Eyebrows';
 
 type AvatarProps = {
     avatarUserSettings: Record<Settings, { color?: string; id: string }>;
@@ -38,7 +38,7 @@ export const Avatar = ({ avatarUserSettings }: AvatarProps) => {
                     color={avatarUserSettings.hair.color}
                     id={avatarUserSettings.hair.id}
                 />
-            </div>{' '}
+            </div>
         </div>
     );
 };

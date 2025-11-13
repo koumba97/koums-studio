@@ -3,15 +3,8 @@ interface Prop {
 }
 
 const BraidedScalp = ({ color }: Prop) => (
-    <svg
-        id="Calque_1"
-        data-name="Calque 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 909.82 1192.73"
-    >
-        <g>
-            <Paths color={color} />
-        </g>
+    <g>
+        <Paths color={color} />
         <g style={{ opacity: 0.6 }}>
             <Paths color="black" />
         </g>
@@ -27,7 +20,7 @@ const BraidedScalp = ({ color }: Prop) => (
             d="M705.87,1023.06c5.42,14.85-4.93,33.87-14.64,44.92-23.5,26.76-59,39.32-86.13,9.24-28.31-31.38-37.46-85.02-41.44-125.93-1.33-13.71-3.39-34.06-2.17-47.42.54-5.87,3.69-11.75,10.5-10.51,6.96,1.27,8.56,12.66,9.94,18.4,10.87,45.05,9.7,112.59,41.71,148.02,24.57,27.19,60.98-12.13,76.53-31.38,1.14-1.42,3.39-6.74,5.7-5.33Z"
             fill={color}
         />
-    </svg>
+    </g>
 );
 
 const Paths = ({ color }: Prop) => (

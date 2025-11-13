@@ -74,7 +74,7 @@ function App() {
             <div className="control-container">
                 <div className="scroll">
                     <div className="tabs-container">
-                        {settingList.map((setting, i) => {
+                        {settingList.map((setting) => {
                             return (
                                 <button
                                     className={`setting-tab ${currentSetting === setting.id ? 'active' : ''}`}
@@ -168,7 +168,7 @@ const ColorOptionContainer = ({
 }: ColorOptionProp) => {
     return (
         <>
-            {colorList.map((color, i) => {
+            {colorList.map((color) => {
                 return (
                     <button
                         className={`color-picker ${color === currentColor ? 'active' : null}`}
