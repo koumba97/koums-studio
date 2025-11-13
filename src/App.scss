@@ -222,9 +222,6 @@
         padding: 4px 20px;
     }
     .with-love {
-        top: unset;
-        bottom: 30px;
-        position: absolute;
-        width: calc(100% - 20px * 2);
+        width: 100%;
     }
 }
