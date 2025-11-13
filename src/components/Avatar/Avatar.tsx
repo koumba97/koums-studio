@@ -1,6 +1,6 @@
 /// <reference types="vite-plugin-svgr/client" />
 
-import EyesAlmond from '../Settings/EyesAlmond';
+import EyesAlmond from '../Settings/Eyes';
 import FaceShape from '../Settings/FaceShape';
 import Lips from '../Settings/Lips';
 import Nose from '../Settings/Nose';
@@ -9,6 +9,7 @@ import { Settings } from '../../constants/CustomizationSettings';
 import HairBack from '../Settings/HairBack';
 import HairFront from '../Settings/HairFront';
 import Eyebrows from '../Settings/Eyebrows';
+import Eyes from '../Settings/Eyes';
 
 type AvatarProps = {
     avatarUserSettings: Record<Settings, { color?: string; id: string }>;
@@ -31,7 +32,10 @@ export const Avatar = ({ avatarUserSettings }: AvatarProps) => {
                     id={avatarUserSettings.eyebrows.id}
                     color={avatarUserSettings.eyebrows.color}
                 />
-                <EyesAlmond color={avatarUserSettings.eyes.color} />
+                <Eyes
+                    id={avatarUserSettings.eyes.id}
+                    color={avatarUserSettings.eyes.color}
+                />
                 <Nose id={avatarUserSettings.nose.id} />
                 <Lips
                     id={avatarUserSettings.lips.id}

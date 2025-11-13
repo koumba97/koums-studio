@@ -133,6 +133,7 @@ export const CustomizationSettings: Category[] = [
                     { id: 'eyes-shape1', preview: '', svgRef: '' },
                     { id: 'eyes-shape2', preview: '', svgRef: '' },
                     { id: 'eyes-shape3', preview: '', svgRef: '' },
+                    { id: 'eyes-shape4', preview: '', svgRef: '' },
                 ],
             },
         ],

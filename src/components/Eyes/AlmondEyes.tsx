@@ -2,7 +2,7 @@ interface Prop {
     color?: string;
 }
 
-const EyesAlmond = ({ color }: Prop) => (
+const AlmondEyes = ({ color }: Prop) => (
     <svg
         id="Calque_1"
         data-name="Calque 1"
@@ -32,4 +32,4 @@ const EyesAlmond = ({ color }: Prop) => (
     </svg>
 );
 
-export default EyesAlmond;
+export default AlmondEyes;
