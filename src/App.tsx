@@ -43,8 +43,8 @@ function App() {
             id: 'nose-shape1',
         },
         lips: {
-            color: lipsColor[2],
-            id: 'lips-1',
+            color: lipsColor[6],
+            id: 'lips-shape2',
         },
     };
 
