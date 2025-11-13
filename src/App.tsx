@@ -24,7 +24,7 @@ function App() {
     > = {
         face: {
             color: skinColor[12],
-            id: 'face-1',
+            id: 'face-shape2',
         },
         hair: {
             color: hairColor[2],
@@ -37,10 +37,10 @@ function App() {
         },
         eyebrows: {
             color: eyebrowsColor[2],
-            id: 'eyebrows-1',
+            id: 'eyebrows-shape1',
         },
         nose: {
-            id: 'nose-shape-1',
+            id: 'nose-shape1',
         },
         lips: {
             color: lipsColor[2],
@@ -67,7 +67,7 @@ function App() {
         setAvatarUserSettings(newAvatarSettings);
     };
     return (
-        <>
+        <div className="project-container">
             <img src={KoumsStudio} className="koums-studio-logo" />
             <Avatar avatarUserSettings={avatarUserSettings} />
 
@@ -150,7 +150,7 @@ function App() {
                 </div>
                 <p className="with-love">Made with 🩷 by Koum</p>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -2,12 +2,6 @@ import DiamondFace from '../Face/DiamondFace';
 import RoundFace from '../Face/RoundFace';
 import SquareFace from '../Face/SquareFace';
 import ThinFace from '../Face/ThinFace';
-import Afro from '../Hair/Style/Afro';
-import AfroPuffs from '../Hair/Style/AfroPuffs';
-import Bob from '../Hair/Style/Bob';
-import Braids from '../Hair/Style/Braids';
-import Straight from '../Hair/Style/Straight';
-import Wavy from '../Hair/Style/Wavy';
 
 interface Prop {
     color?: string;

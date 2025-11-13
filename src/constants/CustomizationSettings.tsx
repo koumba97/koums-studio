@@ -15,6 +15,13 @@ import eyebrows3 from '../assets/thumbnails/eyebrows/eyebrows3.jpg';
 import eyebrows4 from '../assets/thumbnails/eyebrows/eyebrows4.jpg';
 import eyebrows5 from '../assets/thumbnails/eyebrows/eyebrows5.jpg';
 import eyebrows6 from '../assets/thumbnails/eyebrows/eyebrows6.jpg';
+import nose1 from '../assets/thumbnails/nose/nose1.jpg';
+import nose2 from '../assets/thumbnails/nose/nose2.jpg';
+import nose3 from '../assets/thumbnails/nose/nose3.jpg';
+import nose4 from '../assets/thumbnails/nose/nose4.jpg';
+import nose5 from '../assets/thumbnails/nose/nose5.jpg';
+import nose6 from '../assets/thumbnails/nose/nose6.jpg';
+
 import {
     eyebrowsColor,
     eyesColor,
@@ -139,9 +146,12 @@ export const CustomizationSettings: Category[] = [
                 name: 'Nose shape',
                 type: 'shape',
                 options: [
-                    { id: 'nose-shape-1', preview: '', svgRef: '' },
-                    { id: 'nose-shape-2', preview: '', svgRef: '' },
-                    { id: 'nose-shape-3', preview: '', svgRef: '' },
+                    { id: 'nose-shape1', preview: nose1, svgRef: '' },
+                    { id: 'nose-shape2', preview: nose2, svgRef: '' },
+                    { id: 'nose-shape3', preview: nose3, svgRef: '' },
+                    { id: 'nose-shape4', preview: nose4, svgRef: '' },
+                    { id: 'nose-shape5', preview: nose5, svgRef: '' },
+                    { id: 'nose-shape6', preview: nose6, svgRef: '' },
                 ],
             },
         ],
