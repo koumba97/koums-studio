@@ -84,7 +84,7 @@
 }
 
 .colors-container {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     width: fit-content;
     gap: 10px;
@@ -204,7 +204,7 @@
         max-width: calc(1400px - 40px * 2);
         overflow: scroll;
         margin-bottom: 10px;
-        margin: 10px auto auto -20px;
+        margin: 5px auto auto -20px;
 
         &::-webkit-scrollbar {
             display: none;
@@ -212,7 +212,7 @@
     }
 
     .tabs-container {
-        padding: 4px 20px;
+        padding: 4px 20px 0 20px;
         width: fit-content;
     }
     .shapes-container {
