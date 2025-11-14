@@ -27,6 +27,10 @@ import lips3 from '../assets/thumbnails/lips/lips3.jpg';
 import lips4 from '../assets/thumbnails/lips/lips4.jpg';
 import lips5 from '../assets/thumbnails/lips/lips5.jpg';
 import lips6 from '../assets/thumbnails/lips/lips6.jpg';
+import eyes1 from '../assets/thumbnails/eyes/eyes1.jpg';
+import eyes2 from '../assets/thumbnails/eyes/eyes2.jpg';
+import eyes3 from '../assets/thumbnails/eyes/eyes3.jpg';
+import eyes4 from '../assets/thumbnails/eyes/eyes4.jpg';
 
 import {
     eyebrowsColor,
@@ -136,10 +140,10 @@ export const CustomizationSettings: Category[] = [
                 name: 'Eyes shape',
                 type: 'shape',
                 options: [
-                    { id: 'eyes-shape1', preview: '', svgRef: '' },
-                    { id: 'eyes-shape2', preview: '', svgRef: '' },
-                    { id: 'eyes-shape3', preview: '', svgRef: '' },
-                    { id: 'eyes-shape4', preview: '', svgRef: '' },
+                    { id: 'eyes-shape1', preview: eyes1, svgRef: '' },
+                    { id: 'eyes-shape2', preview: eyes2, svgRef: '' },
+                    { id: 'eyes-shape3', preview: eyes3, svgRef: '' },
+                    { id: 'eyes-shape4', preview: eyes4, svgRef: '' },
                 ],
             },
         ],

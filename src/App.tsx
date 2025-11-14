@@ -33,7 +33,7 @@ function App() {
 
         eyes: {
             color: eyesColor[2],
-            id: 'eyes-1',
+            id: 'eyes-shape1',
         },
         eyebrows: {
             color: eyebrowsColor[2],
