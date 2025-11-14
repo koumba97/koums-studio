@@ -37,3 +37,23 @@
         }
     }
 }
+
+.avatar-export-wrapper {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -500px;
+    width: 500px;
+    height: 500px;
+
+    padding: 0px;
+    box-sizing: border-box;
+
+    background: pink;
+    .avatar-container {
+        svg {
+            left: 0;
+            top: -50px;
+        }
+    }
+}

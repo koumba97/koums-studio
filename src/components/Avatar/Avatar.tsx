@@ -19,44 +19,42 @@ type AvatarProps = {
 
 export const Avatar = ({ avatarUserSettings }: AvatarProps) => {
     return (
-        <div className="avatar-wrapper">
-            <div className="avatar-container">
-                <HairBack
-                    color={avatarUserSettings.hair.color}
-                    id={avatarUserSettings.hair.id}
-                />
+        <div className="avatar-container">
+            <HairBack
+                color={avatarUserSettings.hair.color}
+                id={avatarUserSettings.hair.id}
+            />
 
-                <FaceShape
-                    color={avatarUserSettings.face.color}
-                    id={avatarUserSettings.face.id}
-                />
-                <Eyebrows
-                    id={avatarUserSettings.eyebrows.id}
-                    color={avatarUserSettings.eyebrows.color}
-                />
-                <Eyes
-                    id={avatarUserSettings.eyes.id}
-                    color={avatarUserSettings.eyes.color}
-                />
-                <Nose id={avatarUserSettings.nose.id} />
-                <Lips
-                    id={avatarUserSettings.lips.id}
-                    color={avatarUserSettings.lips.color}
-                />
-                <FaceMark id={avatarUserSettings.faceMark.id} />
-                <Tops
-                    id={avatarUserSettings.top.id}
-                    color={avatarUserSettings.top.color}
-                />
-                <Earrings
-                    id={avatarUserSettings.earrings.id}
-                    color={avatarUserSettings.earrings.color}
-                />
-                <HairFront
-                    color={avatarUserSettings.hair.color}
-                    id={avatarUserSettings.hair.id}
-                />
-            </div>
+            <FaceShape
+                color={avatarUserSettings.face.color}
+                id={avatarUserSettings.face.id}
+            />
+            <Eyebrows
+                id={avatarUserSettings.eyebrows.id}
+                color={avatarUserSettings.eyebrows.color}
+            />
+            <Eyes
+                id={avatarUserSettings.eyes.id}
+                color={avatarUserSettings.eyes.color}
+            />
+            <Nose id={avatarUserSettings.nose.id} />
+            <Lips
+                id={avatarUserSettings.lips.id}
+                color={avatarUserSettings.lips.color}
+            />
+            <FaceMark id={avatarUserSettings.faceMark.id} />
+            <Tops
+                id={avatarUserSettings.top.id}
+                color={avatarUserSettings.top.color}
+            />
+            <Earrings
+                id={avatarUserSettings.earrings.id}
+                color={avatarUserSettings.earrings.color}
+            />
+            <HairFront
+                color={avatarUserSettings.hair.color}
+                id={avatarUserSettings.hair.id}
+            />
         </div>
     );
 };

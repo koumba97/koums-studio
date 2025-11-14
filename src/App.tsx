@@ -16,6 +16,7 @@ import {
     Option,
     Settings,
 } from './constants/CustomizationSettings';
+import { Export } from './components/Export';
 
 function App() {
     const avatarDefaultSettings: Record<
@@ -78,8 +79,10 @@ function App() {
     return (
         <div className="project-container">
             <img src={KoumsStudio} className="koums-studio-logo" />
-            <Avatar avatarUserSettings={avatarUserSettings} />
-
+            <div className="avatar-wrapper">
+                <Avatar avatarUserSettings={avatarUserSettings} />
+            </div>
+            <Export avatarUserSettings={avatarUserSettings} />
             <div className="control-container">
                 <div className="scroll">
                     <div className="tabs-container">
@@ -99,6 +102,7 @@ function App() {
                         })}
                     </div>
                 </div>
+
                 <div className="setting-options">
                     {CustomizationSettings.map((setting, index) => {
                         if (setting.id === currentSetting) {
