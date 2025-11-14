@@ -1,8 +1,3 @@
-import BigEyebrows from '../Eyebrows/BigEyesbrows';
-import CutEyebrows from '../Eyebrows/CutEyesbrows';
-import MediumEyebrows from '../Eyebrows/MediumEyesbrows';
-import ShavedEyebrows from '../Eyebrows/ShavedEyebrows';
-import SmallEyebrows from '../Eyebrows/SmallEyesbrows copy';
 import AlmondEyes from '../Eyes/AlmondEyes';
 import DroppyEyes from '../Eyes/DroppyEyes';
 import SleepyEyes from '../Eyes/SleepyEyes';

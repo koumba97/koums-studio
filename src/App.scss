@@ -61,7 +61,8 @@
     cursor: pointer;
     padding: 0px;
     font-weight: 500;
-    max-width: auto;
+    max-width: max-content;
+    white-space: nowrap;
     transition:
         color 0.3s,
         font-weight 0.3s;
@@ -93,6 +94,7 @@
         height: 40px;
         width: 40px;
         border-radius: 10px;
+
         border: none;
         transition:
             0.3s scale,
@@ -112,9 +114,12 @@
         }
     }
     #color-picker {
-        width: 0;
+        //width: 0;
         padding: 0;
         border: none;
+        position: absolute;
+        right: 100px;
+        opacity: 0;
     }
     .free-color-picker {
         height: 40px;
