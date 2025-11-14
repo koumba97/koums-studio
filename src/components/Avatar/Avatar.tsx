@@ -60,12 +60,6 @@ export const Avatar = ({
                 color={avatarUserSettings.hair.color}
                 id={avatarUserSettings.hair.id}
             />
-
-            {download ? (
-                <div className="signature">
-                    <Signature />
-                </div>
-            ) : null}
         </div>
     );
 };
