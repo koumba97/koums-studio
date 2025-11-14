@@ -1,9 +1,3 @@
-import DuckLips from '../Lips/DuckLips';
-import FullLips from '../Lips/FullLips';
-import HeartLips from '../Lips/HeartLips';
-import SmallRoundLips from '../Lips/SmallRoundLips';
-import Smile from '../Lips/Smile';
-import ThinLips from '../Lips/ThinLips';
 import TankTop from '../Tops/TankTop';
 import Tshirt from '../Tops/Tshirt';
 
