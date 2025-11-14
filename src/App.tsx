@@ -17,14 +17,13 @@ import {
     settingList,
     Option,
     Settings,
+    AvatarObject,
 } from './constants/CustomizationSettings';
 import { Export } from './components/Export';
+import { generateRandomAvatar } from './utils/generateRandomAvatar';
 
 function App() {
-    const avatarDefaultSettings: Record<
-        Settings,
-        { color?: string; id: string }
-    > = {
+    const avatarDefaultSettings: AvatarObject = {
         face: {
             color: skinColor[12],
             id: 'face-shape2',
@@ -87,7 +86,12 @@ function App() {
                 <div className="avatar-wrapper">
                     <Avatar avatarUserSettings={avatarUserSettings} />
                 </div>
-                <Export avatarUserSettings={avatarUserSettings} />
+                <Export
+                    avatarUserSettings={avatarUserSettings}
+                    shuffleAvatar={() =>
+                        setAvatarUserSettings(generateRandomAvatar)
+                    }
+                />
             </div>
             <div className="control-container">
                 <div className="scroll">

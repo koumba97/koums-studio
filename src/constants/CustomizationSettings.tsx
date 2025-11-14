@@ -92,6 +92,8 @@ export const settingList: { name: string; id: Settings }[] = [
     { name: 'Top', id: 'top' },
 ];
 
+export type AvatarObject = Record<Settings, { color?: string; id: string }>;
+
 export const CustomizationSettings: Category[] = [
     {
         id: 'face',

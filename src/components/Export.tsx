@@ -1,17 +1,18 @@
 /// <reference types="vite-plugin-svgr/client" />
 
 import './Avatar/Avatar.scss';
-import { Settings } from '../constants/CustomizationSettings';
+import { AvatarObject } from '../constants/CustomizationSettings';
 import { Button } from 'koum-ui';
 import { useRef } from 'react';
 import html2canvas from 'html2canvas';
 import { Avatar } from './Avatar/Avatar';
 
 type AvatarProps = {
-    avatarUserSettings: Record<Settings, { color?: string; id: string }>;
+    avatarUserSettings: AvatarObject;
+    shuffleAvatar: () => void;
 };
 
-export const Export = ({ avatarUserSettings }: AvatarProps) => {
+export const Export = ({ avatarUserSettings, shuffleAvatar }: AvatarProps) => {
     const divRef = useRef<HTMLDivElement>(null);
     const handleExport = async () => {
         if (!divRef.current) return;
@@ -50,6 +51,7 @@ export const Export = ({ avatarUserSettings }: AvatarProps) => {
                     color="primary"
                     label="Shuffle"
                     icon={<p>🎲</p>}
+                    onClick={shuffleAvatar}
                 ></Button>
             </div>
         </>
