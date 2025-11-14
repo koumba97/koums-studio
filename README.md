@@ -24,7 +24,7 @@ In this app, you can create and personalize your own avatar using a wide range o
 
 ## Demo
 
-![Koum's Studio Logo](./src/assets/koums-studio.gif)
+![Koum's Studio Logo](./src/assets/koum-s-studio.gif)
 
 Try Koum's Studio for yourself! Create and customize your own avatar directly in your browser and see all the features in action.
 
@@ -34,4 +34,4 @@ Try Koum's Studio for yourself! Create and customize your own avatar directly in
 
 More components and items are coming soon, including the ability to create a male avatar!
 
-Made with 🩷 by Koum 👩🏾‍💻
+##### Made with 🩷 by Koum 👩🏾‍💻
