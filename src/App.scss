@@ -5,6 +5,7 @@
     max-height: 820px;
     height: 100%;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     background-image: url('./assets/studio.png');
     background-color: #e9f0ff;
@@ -186,6 +187,24 @@
     top: 20px;
 }
 
+.avatar-buttons-wrapper {
+    position: relative;
+}
+
+.buttons-container {
+    position: absolute;
+    right: 50px;
+    bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    p {
+        margin: 0;
+    }
+    .export-button {
+    }
+}
+
 @media (max-width: 700px) {
     .project-container {
         max-height: unset;
@@ -231,21 +250,10 @@
     .with-love {
         width: 100%;
     }
-}
-
-.avatar-buttons-wrapper {
-    position: relative;
-}
-
-.buttons-container {
-    position: absolute;
-    right: 50px;
-    bottom: 200px;
-    display: flex;
-    flex-direction: column;
-    p {
-        margin: 0;
-    }
-    .export-button {
+    .buttons-container {
+        right: 20px;
+        top: 55vh;
+        flex-direction: row;
+        height: max-content;
     }
 }
