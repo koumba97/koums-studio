@@ -24,24 +24,12 @@ const hairColor = [
     '#885B25',
     '#a35e40ff',
     '#7f3f23ff',
-    '#744B1B',
-    '#613D12',
-    '#482C09',
+    '#563918ff',
+    '#412a0fff',
+    '#2d1d0bff',
 ];
 
-const eyebrowsColor = [
-    '#f5dfa7ff',
-    '#e2b870ff',
-    '#BD925E',
-    '#AC814D',
-    '#996F3B',
-    '#885B25',
-    '#a35e40ff',
-    '#7f3f23ff',
-    '#744B1B',
-    '#613D12',
-    '#482C09',
-];
+const eyebrowsColor = hairColor;
 
 const eyesColor = [
     '#88b3bcff',
