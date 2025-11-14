@@ -21,6 +21,12 @@ import nose3 from '../assets/thumbnails/nose/nose3.jpg';
 import nose4 from '../assets/thumbnails/nose/nose4.jpg';
 import nose5 from '../assets/thumbnails/nose/nose5.jpg';
 import nose6 from '../assets/thumbnails/nose/nose6.jpg';
+import lips1 from '../assets/thumbnails/lips/lips1.jpg';
+import lips2 from '../assets/thumbnails/lips/lips2.jpg';
+import lips3 from '../assets/thumbnails/lips/lips3.jpg';
+import lips4 from '../assets/thumbnails/lips/lips4.jpg';
+import lips5 from '../assets/thumbnails/lips/lips5.jpg';
+import lips6 from '../assets/thumbnails/lips/lips6.jpg';
 
 import {
     eyebrowsColor,
@@ -167,12 +173,12 @@ export const CustomizationSettings: Category[] = [
                 name: 'Lips shape',
                 type: 'shape',
                 options: [
-                    { id: 'lips-shape1', preview: '', svgRef: '' },
-                    { id: 'lips-shape2', preview: '', svgRef: '' },
-                    { id: 'lips-shape3', preview: '', svgRef: '' },
-                    { id: 'lips-shape4', preview: '', svgRef: '' },
-                    { id: 'lips-shape5', preview: '', svgRef: '' },
-                    { id: 'lips-shape6', preview: '', svgRef: '' },
+                    { id: 'lips-shape1', preview: lips1, svgRef: '' },
+                    { id: 'lips-shape2', preview: lips2, svgRef: '' },
+                    { id: 'lips-shape3', preview: lips3, svgRef: '' },
+                    { id: 'lips-shape4', preview: lips4, svgRef: '' },
+                    { id: 'lips-shape5', preview: lips5, svgRef: '' },
+                    { id: 'lips-shape6', preview: lips6, svgRef: '' },
                 ],
             },
         ],
