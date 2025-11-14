@@ -26,19 +26,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -60px;
-
-    .signature {
-        position: absolute;
-        width: 100px;
-        height: 40px;
-        bottom: 180px;
-        right: 0;
-
-        svg {
-            top: unset !important;
-        }
-    }
-
     .with-love {
         position: absolute;
         text-align: left;
@@ -85,18 +72,6 @@
         .avatar-container {
             svg {
                 top: -30px;
-            }
-        }
-
-        .signature {
-            position: absolute;
-            width: 100px;
-            height: 40px;
-            bottom: 80px;
-            right: 0;
-
-            svg {
-                top: unset !important;
             }
         }
     }

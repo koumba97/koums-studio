@@ -12,6 +12,7 @@ import Eyes from '../Settings/Eyes';
 import FaceMark from '../Settings/FaceMark';
 import Earrings from '../Settings/Earrings';
 import Tops from '../Settings/Tops';
+import Signature from '../Signature';
 
 type AvatarProps = {
     avatarUserSettings: Record<Settings, { color?: string; id: string }>;
@@ -60,7 +61,7 @@ export const Avatar = ({
                 id={avatarUserSettings.hair.id}
             />
 
-            {download ? <div className="signature">Signature here</div> : null}
+            {download ? <Signature /> : null}
         </div>
     );
 };
