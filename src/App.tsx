@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import {
+    earringsColor,
     eyebrowsColor,
     eyesColor,
     hairColor,
     lipsColor,
     skinColor,
+    topColor,
 } from './constants/ColorSettings';
 import './App.scss';
 import { Avatar } from './components/Avatar/Avatar';
@@ -48,13 +50,15 @@ function App() {
             id: 'lips-shape2',
         },
         faceMark: {
-            id: 'face-mark7',
+            id: 'face-mark1',
         },
         earrings: {
             id: 'earrings1',
+            color: earringsColor[3],
         },
         top: {
-            id: 'top1',
+            id: 'top2',
+            color: topColor[0],
         },
     };
 
@@ -79,10 +83,12 @@ function App() {
     return (
         <div className="project-container">
             <img src={KoumsStudio} className="koums-studio-logo" />
-            <div className="avatar-wrapper">
-                <Avatar avatarUserSettings={avatarUserSettings} />
+            <div className="avatar-buttons-wrapper">
+                <div className="avatar-wrapper">
+                    <Avatar avatarUserSettings={avatarUserSettings} />
+                </div>
+                <Export avatarUserSettings={avatarUserSettings} />
             </div>
-            <Export avatarUserSettings={avatarUserSettings} />
             <div className="control-container">
                 <div className="scroll">
                     <div className="tabs-container">

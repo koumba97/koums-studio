@@ -2,7 +2,7 @@
 
 import './Avatar/Avatar.scss';
 import { Settings } from '../constants/CustomizationSettings';
-
+import { Button } from 'koum-ui';
 import { useRef } from 'react';
 import html2canvas from 'html2canvas';
 import { Avatar } from './Avatar/Avatar';
@@ -17,7 +17,7 @@ export const Export = ({ avatarUserSettings }: AvatarProps) => {
         if (!divRef.current) return;
 
         const canvas = await html2canvas(divRef.current, {
-            backgroundColor: 'pink',
+            //backgroundColor: 'pink',
             scale: 2,
             height: 500,
             width: 500,
@@ -36,9 +36,22 @@ export const Export = ({ avatarUserSettings }: AvatarProps) => {
             <div className="avatar-export-wrapper" ref={divRef}>
                 <Avatar avatarUserSettings={avatarUserSettings} />
             </div>
-            <button onClick={handleExport} style={{ zIndex: 5 }}>
-                Exporter
-            </button>
+            <div className="buttons-container">
+                <Button
+                    additionalClass="export-button"
+                    color="secondary"
+                    label="Download"
+                    onClick={handleExport}
+                    icon={<p>💾</p>}
+                ></Button>
+
+                <Button
+                    additionalClass="export-button"
+                    color="primary"
+                    label="Shuffle"
+                    icon={<p>🎲</p>}
+                ></Button>
+            </div>
         </>
     );
 };

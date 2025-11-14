@@ -38,6 +38,7 @@ import faceMark4 from '../assets/thumbnails/face-mark/face-mark4.jpg';
 import faceMark5 from '../assets/thumbnails/face-mark/face-mark5.jpg';
 import faceMark6 from '../assets/thumbnails/face-mark/face-mark6.jpg';
 import faceMark7 from '../assets/thumbnails/face-mark/face-mark7.jpg';
+import faceMark8 from '../assets/thumbnails/face-mark/face-mark8.jpg';
 
 import {
     eyebrowsColor,
@@ -45,6 +46,8 @@ import {
     hairColor,
     lipsColor,
     skinColor,
+    earringsColor,
+    topColor,
 } from './ColorSettings';
 export type Settings =
     | 'face'
@@ -222,6 +225,7 @@ export const CustomizationSettings: Category[] = [
                     { id: 'face-mark5', preview: faceMark5, svgRef: '' },
                     { id: 'face-mark6', preview: faceMark6, svgRef: '' },
                     { id: 'face-mark7', preview: faceMark7, svgRef: '' },
+                    { id: 'face-mark8', preview: faceMark8, svgRef: '' },
                 ],
             },
         ],
@@ -229,7 +233,7 @@ export const CustomizationSettings: Category[] = [
     {
         id: 'earrings',
         name: 'Earrings',
-        colorOptions: lipsColor,
+        colorOptions: earringsColor,
         attributes: [
             {
                 id: 'earrings',
@@ -245,7 +249,7 @@ export const CustomizationSettings: Category[] = [
     {
         id: 'top',
         name: 'Top',
-        colorOptions: lipsColor,
+        colorOptions: topColor,
         attributes: [
             {
                 id: 'top',

@@ -1,7 +1,5 @@
 .avatar-container {
-    //height: 70%;
     max-width: 480px;
-    //max-height: 500px;
     position: relative;
     margin: auto;
     svg {
@@ -11,6 +9,30 @@
         position: absolute;
         left: 0;
         top: -100px;
+    }
+}
+
+.avatar-export-wrapper {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 500px;
+    height: 500px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url('../../assets/studio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -60px;
+
+    .avatar-container {
+        max-width: 480px;
+        svg {
+            left: 0;
+            top: -50px;
+        }
     }
 }
 
@@ -36,24 +58,14 @@
             top: -10vw;
         }
     }
-}
 
-.avatar-export-wrapper {
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: -500px;
-    width: 500px;
-    height: 500px;
+    .avatar-export-wrapper {
+        display: flex;
 
-    padding: 0px;
-    box-sizing: border-box;
-
-    background: pink;
-    .avatar-container {
-        svg {
-            left: 0;
-            top: -50px;
+        .avatar-container {
+            svg {
+                top: -30px;
+            }
         }
     }
 }
