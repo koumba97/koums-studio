@@ -46,6 +46,9 @@ function App() {
             color: lipsColor[6],
             id: 'lips-shape2',
         },
+        faceMark: {
+            id: 'face-mark7',
+        },
     };
 
     const [currentSetting, setCurrentSetting] = useState<Settings>('face');

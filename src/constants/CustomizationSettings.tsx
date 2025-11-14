@@ -31,6 +31,13 @@ import eyes1 from '../assets/thumbnails/eyes/eyes1.jpg';
 import eyes2 from '../assets/thumbnails/eyes/eyes2.jpg';
 import eyes3 from '../assets/thumbnails/eyes/eyes3.jpg';
 import eyes4 from '../assets/thumbnails/eyes/eyes4.jpg';
+import faceMark1 from '../assets/thumbnails/face-mark/face-mark1.jpg';
+import faceMark2 from '../assets/thumbnails/face-mark/face-mark2.jpg';
+import faceMark3 from '../assets/thumbnails/face-mark/face-mark3.jpg';
+import faceMark4 from '../assets/thumbnails/face-mark/face-mark4.jpg';
+import faceMark5 from '../assets/thumbnails/face-mark/face-mark5.jpg';
+import faceMark6 from '../assets/thumbnails/face-mark/face-mark6.jpg';
+import faceMark7 from '../assets/thumbnails/face-mark/face-mark7.jpg';
 
 import {
     eyebrowsColor,
@@ -39,7 +46,14 @@ import {
     lipsColor,
     skinColor,
 } from './ColorSettings';
-export type Settings = 'face' | 'hair' | 'eyebrows' | 'eyes' | 'nose' | 'lips';
+export type Settings =
+    | 'face'
+    | 'hair'
+    | 'eyebrows'
+    | 'eyes'
+    | 'nose'
+    | 'lips'
+    | 'faceMark';
 
 type Category = {
     id: Settings;
@@ -68,6 +82,7 @@ export const settingList: { name: string; id: Settings }[] = [
     { name: 'Nose', id: 'nose' },
     { name: 'Lips', id: 'lips' },
     { name: 'Eyes', id: 'eyes' },
+    { name: 'Face mark', id: 'faceMark' },
 ];
 
 export const CustomizationSettings: Category[] = [
@@ -183,6 +198,26 @@ export const CustomizationSettings: Category[] = [
                     { id: 'lips-shape4', preview: lips4, svgRef: '' },
                     { id: 'lips-shape5', preview: lips5, svgRef: '' },
                     { id: 'lips-shape6', preview: lips6, svgRef: '' },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'faceMark',
+        name: 'Face mark',
+        attributes: [
+            {
+                id: 'face-mark',
+                name: 'Face mark',
+                type: 'shape',
+                options: [
+                    { id: 'face-mark1', preview: faceMark1, svgRef: '' },
+                    { id: 'face-mark2', preview: faceMark2, svgRef: '' },
+                    { id: 'face-mark3', preview: faceMark3, svgRef: '' },
+                    { id: 'face-mark4', preview: faceMark4, svgRef: '' },
+                    { id: 'face-mark5', preview: faceMark5, svgRef: '' },
+                    { id: 'face-mark6', preview: faceMark6, svgRef: '' },
+                    { id: 'face-mark7', preview: faceMark7, svgRef: '' },
                 ],
             },
         ],
