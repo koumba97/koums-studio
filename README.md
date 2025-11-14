@@ -1,54 +1,27 @@
-# React + TypeScript + Vite
+# Koum's Studio ✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Koum's Studio Logo](./src/assets/koums-studio-logo.png)
 
-Currently, two official plugins are available:
+## What is it?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Koum's Studio is a personal project built with ReactJS, combining my coding, drawing, and UI/UX skills.
 
-## Expanding the ESLint configuration
+In this app, you can create and personalize your own avatar using a wide range of hairstyles, eye shapes, nose shapes, and much more, allowing you to generate over 2.6 trillion unique versions to create a truly one-of-a-kind avatar!
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+...
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Demo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+![Koum's Studio Logo](./src/assets/koum-studio.gif)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Try Koum's Studio for yourself! Create and customize your own avatar directly in your browser and see all the features in action.
+
+[Try the demo 👉](https://koums-studio.vercel.app/)
+
+## What's next?
+
+...
+
+Made with 🩷 by Koum 👩🏾‍💻
