@@ -12,12 +12,17 @@ import Eyes from '../Settings/Eyes';
 import FaceMark from '../Settings/FaceMark';
 import Earrings from '../Settings/Earrings';
 import Tops from '../Settings/Tops';
+import Signature from '../Signature';
 
 type AvatarProps = {
     avatarUserSettings: Record<Settings, { color?: string; id: string }>;
+    download?: boolean;
 };
 
-export const Avatar = ({ avatarUserSettings }: AvatarProps) => {
+export const Avatar = ({
+    avatarUserSettings,
+    download = false,
+}: AvatarProps) => {
     return (
         <div className="avatar-container">
             <HairBack
@@ -55,6 +60,12 @@ export const Avatar = ({ avatarUserSettings }: AvatarProps) => {
                 color={avatarUserSettings.hair.color}
                 id={avatarUserSettings.hair.id}
             />
+
+            {download ? (
+                <div className="signature">
+                    <Signature />
+                </div>
+            ) : null}
         </div>
     );
 };

@@ -35,7 +35,11 @@ export const Export = ({ avatarUserSettings, shuffleAvatar }: AvatarProps) => {
     return (
         <>
             <div className="avatar-export-wrapper" ref={divRef}>
-                <Avatar avatarUserSettings={avatarUserSettings} />
+                <Avatar
+                    avatarUserSettings={avatarUserSettings}
+                    download={true}
+                />
+                <p className="with-love">koumbakeita.com</p>
             </div>
             <div className="buttons-container">
                 <Button
