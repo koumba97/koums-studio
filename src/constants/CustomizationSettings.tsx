@@ -53,7 +53,9 @@ export type Settings =
     | 'eyes'
     | 'nose'
     | 'lips'
-    | 'faceMark';
+    | 'faceMark'
+    | 'earrings'
+    | 'top';
 
 type Category = {
     id: Settings;
@@ -83,6 +85,8 @@ export const settingList: { name: string; id: Settings }[] = [
     { name: 'Lips', id: 'lips' },
     { name: 'Eyes', id: 'eyes' },
     { name: 'Face mark', id: 'faceMark' },
+    { name: 'Earrings', id: 'earrings' },
+    { name: 'Top', id: 'top' },
 ];
 
 export const CustomizationSettings: Category[] = [
@@ -218,6 +222,38 @@ export const CustomizationSettings: Category[] = [
                     { id: 'face-mark5', preview: faceMark5, svgRef: '' },
                     { id: 'face-mark6', preview: faceMark6, svgRef: '' },
                     { id: 'face-mark7', preview: faceMark7, svgRef: '' },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'earrings',
+        name: 'Earrings',
+        colorOptions: lipsColor,
+        attributes: [
+            {
+                id: 'earrings',
+                name: 'Earrings',
+                type: 'shape',
+                options: [
+                    { id: 'earrings1', preview: '', svgRef: '' },
+                    { id: 'earrings2', preview: '', svgRef: '' },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'top',
+        name: 'Top',
+        colorOptions: lipsColor,
+        attributes: [
+            {
+                id: 'top',
+                name: 'Top',
+                type: 'shape',
+                options: [
+                    { id: 'top1', preview: '', svgRef: '' },
+                    { id: 'top2', preview: '', svgRef: '' },
                 ],
             },
         ],

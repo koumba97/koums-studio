@@ -49,6 +49,12 @@ function App() {
         faceMark: {
             id: 'face-mark7',
         },
+        earrings: {
+            id: 'earrings1',
+        },
+        top: {
+            id: 'top1',
+        },
     };
 
     const [currentSetting, setCurrentSetting] = useState<Settings>('face');

@@ -10,6 +10,7 @@ import HairFront from '../Settings/HairFront';
 import Eyebrows from '../Settings/Eyebrows';
 import Eyes from '../Settings/Eyes';
 import FaceMark from '../Settings/FaceMark';
+import Earrings from '../Settings/Earrings';
 
 type AvatarProps = {
     avatarUserSettings: Record<Settings, { color?: string; id: string }>;
@@ -42,6 +43,10 @@ export const Avatar = ({ avatarUserSettings }: AvatarProps) => {
                     color={avatarUserSettings.lips.color}
                 />
                 <FaceMark id={avatarUserSettings.faceMark.id} />
+                <Earrings
+                    id={avatarUserSettings.earrings.id}
+                    color={avatarUserSettings.earrings.color}
+                />
                 <HairFront
                     color={avatarUserSettings.hair.color}
                     id={avatarUserSettings.hair.id}
