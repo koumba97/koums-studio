@@ -29,11 +29,11 @@ function App() {
         },
         hair: {
             color: hairColor[2],
-            id: 'hair-2',
+            id: 'hair-6',
         },
 
         eyes: {
-            color: eyesColor[2],
+            color: eyesColor[6],
             id: 'eyes-shape1',
         },
         eyebrows: {
@@ -207,14 +207,14 @@ const ColorOptionContainer = ({
                 }}
             >
                 <div className="icon"></div>
+                <input
+                    type="color"
+                    name="color-picker"
+                    id="color-picker"
+                    value={currentColor}
+                    onChange={(e) => onColorChange(setting, e.target.value)}
+                />
             </label>
-            <input
-                type="color"
-                name="color-picker"
-                id="color-picker"
-                value={currentColor}
-                onChange={(e) => onColorChange(setting, e.target.value)}
-            />
         </>
     );
 };

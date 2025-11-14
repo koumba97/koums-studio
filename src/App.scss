@@ -114,17 +114,19 @@
         }
     }
     #color-picker {
-        //width: 0;
+        width: 0px;
+        height: 0px;
         padding: 0;
         border: none;
         position: absolute;
-        right: 100px;
-        opacity: 0;
+        left: 10px;
+        //opacity: 0;
     }
     .free-color-picker {
         height: 40px;
         width: 40px;
         background-size: cover;
+        position: relative;
         display: block;
         .icon {
             width: 20px;
