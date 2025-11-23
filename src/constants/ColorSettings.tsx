@@ -13,6 +13,7 @@ const skinColor = [
     '#744B1B',
     '#613D12',
     '#482C09',
+    '#33200aff',
 ];
 
 const hairColor = [
@@ -20,12 +21,12 @@ const hairColor = [
     '#e2b870ff',
     '#BD925E',
     '#AC814D',
-    '#996F3B',
-    '#885B25',
+    '#7b6142ff',
+    '#75542fff',
     '#a35e40ff',
     '#7f3f23ff',
     '#563918ff',
-    '#412a0fff',
+    '#3a2a18ff',
     '#2d1d0bff',
 ];
 
