@@ -1,9 +1,9 @@
-import DuckLips from '../Lips/DuckLips';
-import FullLips from '../Lips/FullLips';
-import HeartLips from '../Lips/HeartLips';
-import SmallRoundLips from '../Lips/SmallRoundLips';
-import Smile from '../Lips/Smile';
-import ThinLips from '../Lips/ThinLips';
+import DuckLips from '../SettingShapes/Lips/DuckLips';
+import FullLips from '../SettingShapes/Lips/FullLips';
+import HeartLips from '../SettingShapes/Lips/HeartLips';
+import SmallRoundLips from '../SettingShapes/Lips/SmallRoundLips';
+import Smile from '../SettingShapes/Lips/Smile';
+import ThinLips from '../SettingShapes/Lips/ThinLips';
 
 interface Prop {
     color?: string;

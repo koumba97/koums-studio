@@ -1,8 +1,8 @@
-import BigEyebrows from '../Eyebrows/BigEyesbrows';
-import CutEyebrows from '../Eyebrows/CutEyesbrows';
-import MediumEyebrows from '../Eyebrows/MediumEyesbrows';
-import ShavedEyebrows from '../Eyebrows/ShavedEyebrows';
-import SmallEyebrows from '../Eyebrows/SmallEyesbrows copy';
+import BigEyebrows from '../SettingShapes/Eyebrows/BigEyesbrows';
+import CutEyebrows from '../SettingShapes/Eyebrows/CutEyesbrows';
+import MediumEyebrows from '../SettingShapes/Eyebrows/MediumEyesbrows';
+import ShavedEyebrows from '../SettingShapes/Eyebrows/ShavedEyebrows';
+import SmallEyebrows from '../SettingShapes/Eyebrows/SmallEyesbrows copy';
 
 interface Prop {
     color?: string;

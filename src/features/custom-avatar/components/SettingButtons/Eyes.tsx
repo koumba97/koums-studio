@@ -1,7 +1,7 @@
-import AlmondEyes from '../Eyes/AlmondEyes';
-import DroppyEyes from '../Eyes/DroppyEyes';
-import SleepyEyes from '../Eyes/SleepyEyes';
-import ThinEyes from '../Eyes/ThinEyes';
+import AlmondEyes from '../SettingShapes/Eyes/AlmondEyes';
+import DroppyEyes from '../SettingShapes/Eyes/DroppyEyes';
+import SleepyEyes from '../SettingShapes/Eyes/SleepyEyes';
+import ThinEyes from '../SettingShapes/Eyes/ThinEyes';
 
 interface Prop {
     color?: string;

@@ -1,84 +1,46 @@
 import { useState } from 'react';
-import {
-    earringsColor,
-    eyebrowsColor,
-    eyesColor,
-    hairColor,
-    lipsColor,
-    skinColor,
-    topColor,
-} from './features/avatar/constants';
 import './App.scss';
-import { Avatar } from './features/avatar/components/Avatar/Avatar';
-import ColorGradient from './assets/gradient.jpeg';
+import { Avatar } from './features/custom-avatar/components/Avatar/Avatar';
 import KoumsStudio from './assets/koums-studio-logo.png';
 import {
     CustomizationSettings,
     settingList,
-    Option,
-    Settings,
-    AvatarObject,
-} from './features/avatar/data/CustomizationSettings';
-import { Export } from './features/avatar/components/Export';
-import { generateRandomAvatar } from './features/avatar/utils/generateRandomAvatar';
+} from './features/custom-avatar/data/CustomizationSettings';
+import { useShuffleAvatar } from './features/shuffle-avatar/utils/useShuffleAvatar';
+import { AvatarSettingId } from './features/custom-avatar/types';
+import { avatarDefaultSettings } from './features/custom-avatar/data/DefaultAvatarSettings';
+import ColorOptionContainer from './features/custom-avatar/components/ColorOptionContainer/ColorOptionContainer';
+import ShapeOptionContainer from './features/custom-avatar/components/ShapeOptionContainer/ShapeOptionContainer';
+import { DownloadButton } from './features/download-avatar/components/DownloadButton/DownloadButton';
+import { ShuffledButton } from './features/shuffle-avatar/components/ShuffleButton/ShuffleButton';
 
 function App() {
-    const avatarDefaultSettings: AvatarObject = {
-        face: {
-            color: skinColor[12],
-            id: 'face-shape2',
-        },
-        hair: {
-            color: hairColor[2],
-            id: 'hair-6',
-        },
-
-        eyes: {
-            color: eyesColor[6],
-            id: 'eyes-shape1',
-        },
-        eyebrows: {
-            color: eyebrowsColor[2],
-            id: 'eyebrows-shape1',
-        },
-        nose: {
-            id: 'nose-shape1',
-        },
-        lips: {
-            color: lipsColor[6],
-            id: 'lips-shape2',
-        },
-        faceMark: {
-            id: 'face-mark1',
-        },
-        earrings: {
-            id: 'earrings1',
-            color: earringsColor[3],
-        },
-        top: {
-            id: 'top2',
-            color: topColor[0],
-        },
-    };
-
-    const [currentSetting, setCurrentSetting] = useState<Settings>('face');
+    const [currentSetting, setCurrentSetting] =
+        useState<AvatarSettingId>('face');
     const [avatarUserSettings, setAvatarUserSettings] = useState(
         avatarDefaultSettings
     );
 
-    const handleColorChange = (setting: Settings, color: string) => {
-        const newAvatarSettings = { ...avatarUserSettings };
-        newAvatarSettings[setting].color = color;
-
-        setAvatarUserSettings(newAvatarSettings);
+    const handleColorChange = (setting: AvatarSettingId, color: string) => {
+        setAvatarUserSettings((prev) => ({
+            ...prev,
+            [setting]: {
+                ...prev[setting],
+                color,
+            },
+        }));
     };
 
-    const handleShapeChange = (setting: Settings, shape: string) => {
-        const newAvatarSettings = { ...avatarUserSettings };
-        newAvatarSettings[setting].id = shape;
-
-        setAvatarUserSettings(newAvatarSettings);
+    const handleShapeChange = (setting: AvatarSettingId, shape: string) => {
+        setAvatarUserSettings((prev) => ({
+            ...prev,
+            [setting]: {
+                ...prev[setting],
+                shape,
+            },
+        }));
     };
+
     return (
         <div className="project-container">
             <img src={KoumsStudio} className="koums-studio-logo" />
@@ -86,12 +48,15 @@ function App() {
                 <div className="avatar-wrapper">
                     <Avatar avatarUserSettings={avatarUserSettings} />
                 </div>
-                <Export
-                    avatarUserSettings={avatarUserSettings}
-                    shuffleAvatar={() =>
-                        setAvatarUserSettings(generateRandomAvatar)
-                    }
-                />
+
+                <div className="buttons-container">
+                    <DownloadButton avatarUserSettings={avatarUserSettings} />
+                    <ShuffledButton
+                        shuffleAvatar={() =>
+                            setAvatarUserSettings(useShuffleAvatar)
+                        }
+                    />
+                </div>
             </div>
             <div className="control-container">
                 <div className="scroll">
@@ -176,82 +141,5 @@ function App() {
         </div>
     );
 }
-
-type ColorOptionProp = {
-    setting: Settings;
-    colorList: string[];
-    currentColor?: string;
-    onColorChange: (setting: Settings, color: string) => void;
-};
-const ColorOptionContainer = ({
-    setting,
-    colorList,
-    currentColor,
-    onColorChange,
-}: ColorOptionProp) => {
-    return (
-        <>
-            {colorList.map((color) => {
-                return (
-                    <button
-                        className={`color-picker ${color === currentColor ? 'active' : null}`}
-                        onClick={() => onColorChange(setting, color)}
-                        style={{
-                            backgroundColor: color,
-                        }}
-                        key={`color-${color}`}
-                    />
-                );
-            })}
-
-            <label
-                htmlFor="color-picker"
-                className={`color-picker free-color-picker ${!colorList.includes(currentColor!) ? 'active' : null}`}
-                style={{
-                    backgroundColor: !colorList.includes(currentColor!)
-                        ? currentColor
-                        : undefined,
-                    backgroundImage: !colorList.includes(currentColor!)
-                        ? undefined
-                        : `url(${ColorGradient})`,
-                }}
-            >
-                <div className="icon"></div>
-                <input
-                    type="color"
-                    name="color-picker"
-                    id="color-picker"
-                    value={currentColor}
-                    onChange={(e) => onColorChange(setting, e.target.value)}
-                />
-            </label>
-        </>
-    );
-};
-
-type ShapeOptionProp = {
-    setting: Settings;
-    option: Option;
-    currentShape?: string;
-    onShapeChange: (setting: Settings, shape: string) => void;
-};
-const ShapeOptionContainer = ({
-    setting,
-    option,
-    currentShape,
-    onShapeChange,
-}: ShapeOptionProp) => {
-    return (
-        <button
-            className={`shape-picker ${option.id === currentShape ? 'active' : null}`}
-            onClick={() => onShapeChange(setting, option.id)}
-            style={{
-                backgroundImage: `url(${option.preview})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-            }}
-        ></button>
-    );
-};
 
 export default App;

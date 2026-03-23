@@ -1,9 +1,9 @@
-import Afro from '../Hair/Style/Afro';
-import AfroPuffs from '../Hair/Style/AfroPuffs';
-import Bob from '../Hair/Style/Bob';
-import Braids from '../Hair/Style/Braids';
-import Straight from '../Hair/Style/Straight';
-import Wavy from '../Hair/Style/Wavy';
+import Afro from '../SettingShapes/Hair/Style/Afro';
+import AfroPuffs from '../SettingShapes/Hair/Style/AfroPuffs';
+import Bob from '../SettingShapes/Hair/Style/Bob';
+import Braids from '../SettingShapes/Hair/Style/Braids';
+import Straight from '../SettingShapes/Hair/Style/Straight';
+import Wavy from '../SettingShapes/Hair/Style/Wavy';
 
 interface Prop {
     color?: string;

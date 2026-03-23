@@ -1,9 +1,9 @@
 import {
     AvatarObject,
     CustomizationSettings,
-} from '../data/CustomizationSettings';
+} from '../../custom-avatar/data/CustomizationSettings';
 
-export function generateRandomAvatar() {
+export const useShuffleAvatar = () => {
     const avatar = {} as AvatarObject;
 
     CustomizationSettings.forEach((category) => {
@@ -26,4 +26,4 @@ export function generateRandomAvatar() {
     });
 
     return avatar;
-}
+};

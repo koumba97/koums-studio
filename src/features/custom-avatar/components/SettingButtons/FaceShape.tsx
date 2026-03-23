@@ -1,7 +1,7 @@
-import DiamondFace from '../Face/DiamondFace';
-import RoundFace from '../Face/RoundFace';
-import SquareFace from '../Face/SquareFace';
-import ThinFace from '../Face/ThinFace';
+import DiamondFace from '../SettingShapes/Face/DiamondFace';
+import RoundFace from '../SettingShapes/Face/RoundFace';
+import SquareFace from '../SettingShapes/Face/SquareFace';
+import ThinFace from '../SettingShapes/Face/ThinFace';
 
 interface Prop {
     color?: string;

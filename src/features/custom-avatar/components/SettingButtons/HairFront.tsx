@@ -1,7 +1,7 @@
-import AfroFront from '../Hair/Scalp/AfroFront';
-import BraidedScalp from '../Hair/Scalp/BraidedScalp';
-import DefaultScalp from '../Hair/Scalp/DefaultScalp';
-import MiddlePart from '../Hair/Scalp/MiddlePart';
+import AfroFront from '../SettingShapes/Hair/Scalp/AfroFront';
+import BraidedScalp from '../SettingShapes/Hair/Scalp/BraidedScalp';
+import DefaultScalp from '../SettingShapes/Hair/Scalp/DefaultScalp';
+import MiddlePart from '../SettingShapes/Hair/Scalp/MiddlePart';
 
 interface Prop {
     color?: string;

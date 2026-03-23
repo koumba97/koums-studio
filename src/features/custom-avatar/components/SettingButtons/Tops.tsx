@@ -1,5 +1,5 @@
-import TankTop from '../Tops/TankTop';
-import Tshirt from '../Tops/Tshirt';
+import TankTop from '../SettingShapes/Tops/TankTop';
+import Tshirt from '../SettingShapes/Tops/Tshirt';
 
 interface Prop {
     color?: string;

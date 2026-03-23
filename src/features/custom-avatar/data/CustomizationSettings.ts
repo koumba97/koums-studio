@@ -53,38 +53,9 @@ import {
     earringsColor,
     topColor,
 } from '../constants';
-export type Settings =
-    | 'face'
-    | 'hair'
-    | 'eyebrows'
-    | 'eyes'
-    | 'nose'
-    | 'lips'
-    | 'faceMark'
-    | 'earrings'
-    | 'top';
+import { AvatarSettingId, Category } from '../types';
 
-type Category = {
-    id: Settings;
-    name: string;
-    colorOptions?: string[];
-    attributes: Attribute[];
-};
-
-type Attribute = {
-    id: string;
-    name: string;
-    type: 'color' | 'shape' | 'size';
-    options: Option[];
-};
-
-export type Option = {
-    id: string;
-    preview: any;
-    svgRef?: string;
-};
-
-export const settingList: { name: string; id: Settings }[] = [
+export const settingList: { name: string; id: AvatarSettingId }[] = [
     { name: 'Face', id: 'face' },
     { name: 'Hair', id: 'hair' },
     { name: 'Eyebrows', id: 'eyebrows' },
@@ -96,7 +67,10 @@ export const settingList: { name: string; id: Settings }[] = [
     { name: 'Top', id: 'top' },
 ];
 
-export type AvatarObject = Record<Settings, { color?: string; id: string }>;
+export type AvatarObject = Record<
+    AvatarSettingId,
+    { color?: string; id: string }
+>;
 
 export const CustomizationSettings: Category[] = [
     {

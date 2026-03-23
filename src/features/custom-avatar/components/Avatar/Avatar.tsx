@@ -1,21 +1,21 @@
 /// <reference types="vite-plugin-svgr/client" />
 
-import FaceShape from '../Settings/FaceShape';
-import Lips from '../Settings/Lips';
-import Nose from '../Settings/Nose';
+import FaceShape from '../SettingButtons/FaceShape';
+import Lips from '../SettingButtons/Lips';
+import Nose from '../SettingButtons/Nose';
 import './Avatar.scss';
-import { Settings } from '../../data/CustomizationSettings';
-import HairBack from '../Settings/HairBack';
-import HairFront from '../Settings/HairFront';
-import Eyebrows from '../Settings/Eyebrows';
-import Eyes from '../Settings/Eyes';
-import FaceMark from '../Settings/FaceMark';
-import Earrings from '../Settings/Earrings';
-import Tops from '../Settings/Tops';
+import { AvatarSettingId } from '../../types';
+import HairBack from '../SettingButtons/HairBack';
+import HairFront from '../SettingButtons/HairFront';
+import Eyebrows from '../SettingButtons/Eyebrows';
+import Eyes from '../SettingButtons/Eyes';
+import FaceMark from '../SettingButtons/FaceMark';
+import Earrings from '../SettingButtons/Earrings';
+import Tops from '../SettingButtons/Tops';
 import Signature from '../Signature';
 
 type AvatarProps = {
-    avatarUserSettings: Record<Settings, { color?: string; id: string }>;
+    avatarUserSettings: Record<AvatarSettingId, { color?: string; id: string }>;
     download?: boolean;
 };
 
