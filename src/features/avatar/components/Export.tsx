@@ -1,7 +1,7 @@
 /// <reference types="vite-plugin-svgr/client" />
 
 import './Avatar/Avatar.scss';
-import { AvatarObject } from '../constants/CustomizationSettings';
+import { AvatarObject } from '../data/CustomizationSettings';
 import { Button } from 'koum-ui';
 import { useRef } from 'react';
 import html2canvas from 'html2canvas';

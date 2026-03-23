@@ -7,9 +7,9 @@ import {
     lipsColor,
     skinColor,
     topColor,
-} from './constants/ColorSettings';
+} from './features/avatar/constants';
 import './App.scss';
-import { Avatar } from './components/Avatar/Avatar';
+import { Avatar } from './features/avatar/components/Avatar/Avatar';
 import ColorGradient from './assets/gradient.jpeg';
 import KoumsStudio from './assets/koums-studio-logo.png';
 import {
@@ -18,9 +18,9 @@ import {
     Option,
     Settings,
     AvatarObject,
-} from './constants/CustomizationSettings';
-import { Export } from './components/Export';
-import { generateRandomAvatar } from './utils/generateRandomAvatar';
+} from './features/avatar/data/CustomizationSettings';
+import { Export } from './features/avatar/components/Export';
+import { generateRandomAvatar } from './features/avatar/utils/generateRandomAvatar';
 
 function App() {
     const avatarDefaultSettings: AvatarObject = {

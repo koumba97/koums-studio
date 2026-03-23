@@ -1,7 +1,7 @@
 import {
     AvatarObject,
     CustomizationSettings,
-} from '../constants/CustomizationSettings';
+} from '../data/CustomizationSettings';
 
 export function generateRandomAvatar() {
     const avatar = {} as AvatarObject;

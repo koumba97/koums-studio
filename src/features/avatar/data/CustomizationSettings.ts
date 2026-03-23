@@ -1,48 +1,48 @@
-import hair1 from '../assets/thumbnails/hair/hair1.jpg';
-import hair2 from '../assets/thumbnails/hair/hair2.jpg';
-import hair3 from '../assets/thumbnails/hair/hair3.jpg';
-import hair4 from '../assets/thumbnails/hair/hair4.jpg';
-import hair5 from '../assets/thumbnails/hair/hair5.jpg';
-import hair6 from '../assets/thumbnails/hair/hair6.jpg';
-import hair7 from '../assets/thumbnails/hair/hair7.jpg';
-import face1 from '../assets/thumbnails/face/face1.jpg';
-import face2 from '../assets/thumbnails/face/face2.jpg';
-import face3 from '../assets/thumbnails/face/face3.jpg';
-import face4 from '../assets/thumbnails/face/face4.jpg';
-import eyebrows1 from '../assets/thumbnails/eyebrows/eyebrows1.jpg';
-import eyebrows2 from '../assets/thumbnails/eyebrows/eyebrows2.jpg';
-import eyebrows3 from '../assets/thumbnails/eyebrows/eyebrows3.jpg';
-import eyebrows4 from '../assets/thumbnails/eyebrows/eyebrows4.jpg';
-import eyebrows5 from '../assets/thumbnails/eyebrows/eyebrows5.jpg';
-import eyebrows6 from '../assets/thumbnails/eyebrows/eyebrows6.jpg';
-import nose1 from '../assets/thumbnails/nose/nose1.jpg';
-import nose2 from '../assets/thumbnails/nose/nose2.jpg';
-import nose3 from '../assets/thumbnails/nose/nose3.jpg';
-import nose4 from '../assets/thumbnails/nose/nose4.jpg';
-import nose5 from '../assets/thumbnails/nose/nose5.jpg';
-import nose6 from '../assets/thumbnails/nose/nose6.jpg';
-import lips1 from '../assets/thumbnails/lips/lips1.jpg';
-import lips2 from '../assets/thumbnails/lips/lips2.jpg';
-import lips3 from '../assets/thumbnails/lips/lips3.jpg';
-import lips4 from '../assets/thumbnails/lips/lips4.jpg';
-import lips5 from '../assets/thumbnails/lips/lips5.jpg';
-import lips6 from '../assets/thumbnails/lips/lips6.jpg';
-import eyes1 from '../assets/thumbnails/eyes/eyes1.jpg';
-import eyes2 from '../assets/thumbnails/eyes/eyes2.jpg';
-import eyes3 from '../assets/thumbnails/eyes/eyes3.jpg';
-import eyes4 from '../assets/thumbnails/eyes/eyes4.jpg';
-import faceMark1 from '../assets/thumbnails/face-mark/face-mark1.jpg';
-import faceMark2 from '../assets/thumbnails/face-mark/face-mark2.jpg';
-import faceMark3 from '../assets/thumbnails/face-mark/face-mark3.jpg';
-import faceMark4 from '../assets/thumbnails/face-mark/face-mark4.jpg';
-import faceMark5 from '../assets/thumbnails/face-mark/face-mark5.jpg';
-import faceMark6 from '../assets/thumbnails/face-mark/face-mark6.jpg';
-import faceMark7 from '../assets/thumbnails/face-mark/face-mark7.jpg';
-import faceMark8 from '../assets/thumbnails/face-mark/face-mark8.jpg';
-import earrings1 from '../assets/thumbnails/earrings/earrings1.jpg';
-import earrigs2 from '../assets/thumbnails/earrings/earrings2.jpg';
-import top1 from '../assets/thumbnails/top/top1.jpg';
-import top2 from '../assets/thumbnails/top/top2.jpg';
+import hair1 from '@/assets/thumbnails/hair/hair1.jpg';
+import hair2 from '@/assets/thumbnails/hair/hair2.jpg';
+import hair3 from '@/assets/thumbnails/hair/hair3.jpg';
+import hair4 from '@/assets/thumbnails/hair/hair4.jpg';
+import hair5 from '@/assets/thumbnails/hair/hair5.jpg';
+import hair6 from '@/assets/thumbnails/hair/hair6.jpg';
+import hair7 from '@/assets/thumbnails/hair/hair7.jpg';
+import face1 from '@/assets/thumbnails/face/face1.jpg';
+import face2 from '@/assets/thumbnails/face/face2.jpg';
+import face3 from '@/assets/thumbnails/face/face3.jpg';
+import face4 from '@/assets/thumbnails/face/face4.jpg';
+import eyebrows1 from '@/assets/thumbnails/eyebrows/eyebrows1.jpg';
+import eyebrows2 from '@/assets/thumbnails/eyebrows/eyebrows2.jpg';
+import eyebrows3 from '@/assets/thumbnails/eyebrows/eyebrows3.jpg';
+import eyebrows4 from '@/assets/thumbnails/eyebrows/eyebrows4.jpg';
+import eyebrows5 from '@/assets/thumbnails/eyebrows/eyebrows5.jpg';
+import eyebrows6 from '@/assets/thumbnails/eyebrows/eyebrows6.jpg';
+import nose1 from '@/assets/thumbnails/nose/nose1.jpg';
+import nose2 from '@/assets/thumbnails/nose/nose2.jpg';
+import nose3 from '@/assets/thumbnails/nose/nose3.jpg';
+import nose4 from '@/assets/thumbnails/nose/nose4.jpg';
+import nose5 from '@/assets/thumbnails/nose/nose5.jpg';
+import nose6 from '@/assets/thumbnails/nose/nose6.jpg';
+import lips1 from '@/assets/thumbnails/lips/lips1.jpg';
+import lips2 from '@/assets/thumbnails/lips/lips2.jpg';
+import lips3 from '@/assets/thumbnails/lips/lips3.jpg';
+import lips4 from '@/assets/thumbnails/lips/lips4.jpg';
+import lips5 from '@/assets/thumbnails/lips/lips5.jpg';
+import lips6 from '@/assets/thumbnails/lips/lips6.jpg';
+import eyes1 from '@/assets/thumbnails/eyes/eyes1.jpg';
+import eyes2 from '@/assets/thumbnails/eyes/eyes2.jpg';
+import eyes3 from '@/assets/thumbnails/eyes/eyes3.jpg';
+import eyes4 from '@/assets/thumbnails/eyes/eyes4.jpg';
+import faceMark1 from '@/assets/thumbnails/face-mark/face-mark1.jpg';
+import faceMark2 from '@/assets/thumbnails/face-mark/face-mark2.jpg';
+import faceMark3 from '@/assets/thumbnails/face-mark/face-mark3.jpg';
+import faceMark4 from '@/assets/thumbnails/face-mark/face-mark4.jpg';
+import faceMark5 from '@/assets/thumbnails/face-mark/face-mark5.jpg';
+import faceMark6 from '@/assets/thumbnails/face-mark/face-mark6.jpg';
+import faceMark7 from '@/assets/thumbnails/face-mark/face-mark7.jpg';
+import faceMark8 from '@/assets/thumbnails/face-mark/face-mark8.jpg';
+import earrings1 from '@/assets/thumbnails/earrings/earrings1.jpg';
+import earrigs2 from '@/assets/thumbnails/earrings/earrings2.jpg';
+import top1 from '@/assets/thumbnails/top/top1.jpg';
+import top2 from '@/assets/thumbnails/top/top2.jpg';
 
 import {
     eyebrowsColor,
@@ -52,7 +52,7 @@ import {
     skinColor,
     earringsColor,
     topColor,
-} from './ColorSettings';
+} from '../constants';
 export type Settings =
     | 'face'
     | 'hair'

@@ -4,7 +4,7 @@ import FaceShape from '../Settings/FaceShape';
 import Lips from '../Settings/Lips';
 import Nose from '../Settings/Nose';
 import './Avatar.scss';
-import { Settings } from '../../constants/CustomizationSettings';
+import { Settings } from '../../data/CustomizationSettings';
 import HairBack from '../Settings/HairBack';
 import HairFront from '../Settings/HairFront';
 import Eyebrows from '../Settings/Eyebrows';
