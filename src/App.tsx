@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.scss';
 import { Avatar } from './features/custom-avatar/components/Avatar/Avatar';
 import KoumsStudio from './assets/koums-studio-logo.png';
@@ -7,39 +6,21 @@ import {
     settingList,
 } from './features/custom-avatar/data/CustomizationSettings';
 import { useShuffleAvatar } from './features/shuffle-avatar/utils/useShuffleAvatar';
-import { AvatarSettingId } from './features/custom-avatar/types';
-import { avatarDefaultSettings } from './features/custom-avatar/data/DefaultAvatarSettings';
 import ColorOptionContainer from './features/custom-avatar/components/ColorOptionContainer/ColorOptionContainer';
 import ShapeOptionContainer from './features/custom-avatar/components/ShapeOptionContainer/ShapeOptionContainer';
 import { DownloadButton } from './features/download-avatar/components/DownloadButton/DownloadButton';
 import { ShuffledButton } from './features/shuffle-avatar/components/ShuffleButton/ShuffleButton';
+import { useAvatarSettings } from './features/custom-avatar/utils/useAvatarChange';
 
 function App() {
-    const [currentSetting, setCurrentSetting] =
-        useState<AvatarSettingId>('face');
-    const [avatarUserSettings, setAvatarUserSettings] = useState(
-        avatarDefaultSettings
-    );
-
-    const handleColorChange = (setting: AvatarSettingId, color: string) => {
-        setAvatarUserSettings((prev) => ({
-            ...prev,
-            [setting]: {
-                ...prev[setting],
-                color,
-            },
-        }));
-    };
-
-    const handleShapeChange = (setting: AvatarSettingId, shape: string) => {
-        setAvatarUserSettings((prev) => ({
-            ...prev,
-            [setting]: {
-                ...prev[setting],
-                shape,
-            },
-        }));
-    };
+    const {
+        avatarUserSettings,
+        setAvatarUserSettings,
+        currentSetting,
+        setCurrentSetting,
+        handleColorChange,
+        handleShapeChange,
+    } = useAvatarSettings();
 
     return (
         <div className="project-container">
