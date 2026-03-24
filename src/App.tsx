@@ -5,12 +5,12 @@ import {
     CustomizationSettings,
     settingList,
 } from './features/custom-avatar/data/CustomizationSettings';
-import { useShuffleAvatar } from './features/shuffle-avatar/utils/useShuffleAvatar';
+import { useShuffleAvatar } from './features/shuffle-avatar/hooks/useShuffleAvatar';
 import ColorOptionContainer from './features/custom-avatar/components/ColorOptionContainer/ColorOptionContainer';
 import ShapeOptionContainer from './features/custom-avatar/components/ShapeOptionContainer/ShapeOptionContainer';
 import { DownloadButton } from './features/download-avatar/components/DownloadButton/DownloadButton';
 import { ShuffledButton } from './features/shuffle-avatar/components/ShuffleButton/ShuffleButton';
-import { useAvatarSettings } from './features/custom-avatar/utils/useAvatarChange';
+import { useAvatarSettings } from './features/custom-avatar/hooks/useAvatarChange';
 
 function App() {
     const {
