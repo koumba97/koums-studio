@@ -2,7 +2,7 @@
 
 import './DownloadButton.scss';
 import { Button } from 'koum-ui';
-import { useDownloadAvatar } from '../../utils/useDownloadAvatar';
+import { useDownloadAvatar } from '../../hooks/useDownloadAvatar';
 import { AvatarDownloadWrapper } from '../AvatarDownloadWrapper/AvatarDownloadWrapper';
 import { DownloadButtonProps } from '../../types';
 

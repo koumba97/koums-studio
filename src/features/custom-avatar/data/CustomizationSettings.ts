@@ -52,7 +52,7 @@ import {
     skinColor,
     earringsColor,
     topColor,
-} from '../constants';
+} from '../../../constants/avatar';
 import { AvatarSettingId, Category } from '../types';
 
 export const settingList: { name: string; id: AvatarSettingId }[] = [

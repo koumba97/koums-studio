@@ -6,7 +6,7 @@ import {
     lipsColor,
     skinColor,
     topColor,
-} from '../constants';
+} from '../../../constants/avatar';
 import { AvatarObject } from './CustomizationSettings';
 
 export const avatarDefaultSettings: AvatarObject = {
