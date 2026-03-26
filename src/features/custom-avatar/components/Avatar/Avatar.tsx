@@ -12,7 +12,7 @@ import Eyes from '../SettingButtons/Eyes';
 import FaceMark from '../SettingButtons/FaceMark';
 import Earrings from '../SettingButtons/Earrings';
 import Tops from '../SettingButtons/Tops';
-import Signature from '../Signature';
+import Signature from '../Signature/Signature';
 
 type AvatarProps = {
     avatarUserSettings: Record<AvatarSettingId, { color?: string; id: string }>;
