@@ -1,4 +1,4 @@
-import { ShapeOptionProp } from '../../types';
+import { ShapeOptionProp } from '../../../types';
 
 const ShapeOptionContainer = ({
     setting,

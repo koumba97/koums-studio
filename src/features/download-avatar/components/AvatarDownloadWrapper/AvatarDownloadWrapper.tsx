@@ -1,6 +1,5 @@
 import { Avatar } from '../../../custom-avatar/components/Avatar/Avatar';
 import { AvatarDownloadWrapperProps } from '../../types';
-import { useDownloadAvatar } from '../../hooks/useDownloadAvatar';
 
 export const AvatarDownloadWrapper = ({
     avatarUserSettings,

@@ -1,4 +1,4 @@
-import { ColorOptionProp } from '../../types';
+import { ColorOptionProp } from '../../../types';
 import ColorGradient from '@/assets/gradient.jpeg';
 
 export const ColorOptionContainer = ({
