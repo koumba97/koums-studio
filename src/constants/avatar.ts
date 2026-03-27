@@ -62,21 +62,6 @@ const earringsColor = [
     '#999999ff',
 ];
 
-const topColor = [
-    '#ecececff',
-    '#ffc337ff',
-    '#b73c17ff',
-    '#2c5021ff',
-    '#28217aff',
-    '#891f4fff',
-];
+const topColor = ['#ecececff', '#ffc337ff', '#b73c17ff', '#2c5021ff', '#28217aff', '#891f4fff'];
 
-export {
-    skinColor,
-    hairColor,
-    eyebrowsColor,
-    eyesColor,
-    lipsColor,
-    earringsColor,
-    topColor,
-};
+export { skinColor, hairColor, eyebrowsColor, eyesColor, lipsColor, earringsColor, topColor };

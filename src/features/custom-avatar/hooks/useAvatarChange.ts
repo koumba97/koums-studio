@@ -3,11 +3,8 @@ import { AvatarSettingId } from '../types';
 import { avatarDefaultSettings } from '../data/DefaultAvatarSettings';
 
 export const useAvatarSettings = () => {
-    const [currentSetting, setCurrentSetting] =
-        useState<AvatarSettingId>('face');
-    const [avatarUserSettings, setAvatarUserSettings] = useState(
-        avatarDefaultSettings
-    );
+    const [currentSetting, setCurrentSetting] = useState<AvatarSettingId>('face');
+    const [avatarUserSettings, setAvatarUserSettings] = useState(avatarDefaultSettings);
 
     const handleShapeChange = (setting: AvatarSettingId, id: string) => {
         setAvatarUserSettings((prev) => ({

@@ -67,10 +67,7 @@ export const settingList: { name: string; id: AvatarSettingId }[] = [
     { name: 'Top', id: 'top' },
 ];
 
-export type AvatarObject = Record<
-    AvatarSettingId,
-    { color?: string; id: string }
->;
+export type AvatarObject = Record<AvatarSettingId, { color?: string; id: string }>;
 
 export const CustomizationSettings: Category[] = [
     {

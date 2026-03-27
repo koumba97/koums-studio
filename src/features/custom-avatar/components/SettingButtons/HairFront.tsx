@@ -17,10 +17,7 @@ const HairFront = ({ color, id = 'hair-1' }: Prop) => (
     >
         {id === 'hair-1' ? (
             <DefaultScalp color={color} />
-        ) : id === 'hair-2' ||
-          id === 'hair-3' ||
-          id === 'hair-4' ||
-          id === 'hair-7' ? (
+        ) : id === 'hair-2' || id === 'hair-3' || id === 'hair-4' || id === 'hair-7' ? (
             <MiddlePart color={color} />
         ) : id === 'hair-5' ? (
             <BraidedScalp color={color} />

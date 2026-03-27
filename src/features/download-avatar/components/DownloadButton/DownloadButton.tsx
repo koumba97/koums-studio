@@ -10,10 +10,7 @@ export const DownloadButton = ({ avatarUserSettings }: DownloadButtonProps) => {
     const { downloadAvatar, divRef } = useDownloadAvatar();
     return (
         <>
-            <AvatarDownloadWrapper
-                avatarUserSettings={avatarUserSettings}
-                divRef={divRef}
-            />
+            <AvatarDownloadWrapper avatarUserSettings={avatarUserSettings} divRef={divRef} />
 
             <Button
                 additionalClass="download-button"

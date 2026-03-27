@@ -27,23 +27,15 @@ function App() {
 
                 <div className="buttons-container">
                     <DownloadButton avatarUserSettings={avatarUserSettings} />
-                    <ShuffledButton
-                        shuffleAvatar={() =>
-                            setAvatarUserSettings(useShuffleAvatar)
-                        }
-                    />
+                    <ShuffledButton shuffleAvatar={() => setAvatarUserSettings(useShuffleAvatar)} />
                 </div>
             </div>
             <ControlContainer
                 avatarUserSettings={avatarUserSettings}
                 currentSetting={currentSetting}
                 setCurrentSetting={(setting) => setCurrentSetting(setting)}
-                handleColorChange={(setting, color) =>
-                    handleColorChange(setting, color)
-                }
-                handleShapeChange={(setting, shape) =>
-                    handleShapeChange(setting, shape)
-                }
+                handleColorChange={(setting, color) => handleColorChange(setting, color)}
+                handleShapeChange={(setting, shape) => handleShapeChange(setting, shape)}
             />
         </div>
     );

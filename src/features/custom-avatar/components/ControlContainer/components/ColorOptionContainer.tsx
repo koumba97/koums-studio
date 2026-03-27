@@ -26,9 +26,7 @@ export const ColorOptionContainer = ({
                 htmlFor="color-picker"
                 className={`color-picker free-color-picker ${!colorList.includes(currentColor!) ? 'active' : null}`}
                 style={{
-                    backgroundColor: !colorList.includes(currentColor!)
-                        ? currentColor
-                        : undefined,
+                    backgroundColor: !colorList.includes(currentColor!) ? currentColor : undefined,
                     backgroundImage: !colorList.includes(currentColor!)
                         ? undefined
                         : `url(${ColorGradient})`,

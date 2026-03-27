@@ -6,11 +6,6 @@ type AvatarProps = {
 
 export const ShuffledButton = ({ shuffleAvatar }: AvatarProps) => {
     return (
-        <Button
-            color="primary"
-            label="Shuffle"
-            icon={<p>🎲</p>}
-            onClick={shuffleAvatar}
-        ></Button>
+        <Button color="primary" label="Shuffle" icon={<p>🎲</p>} onClick={shuffleAvatar}></Button>
     );
 };

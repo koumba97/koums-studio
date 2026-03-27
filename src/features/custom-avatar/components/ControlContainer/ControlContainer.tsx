@@ -1,8 +1,4 @@
-import {
-    AvatarObject,
-    CustomizationSettings,
-    settingList,
-} from '../../data/CustomizationSettings';
+import { AvatarObject, CustomizationSettings, settingList } from '../../data/CustomizationSettings';
 import './ControlContainer.scss';
 
 import { AvatarSettingId } from '../../types';
@@ -52,20 +48,10 @@ const ControlContainer = ({
                                         <div className="colors-container">
                                             <ColorOptionContainer
                                                 setting={setting.id}
-                                                currentColor={
-                                                    avatarUserSettings[
-                                                        setting.id
-                                                    ].color
-                                                }
+                                                currentColor={avatarUserSettings[setting.id].color}
                                                 colorList={setting.colorOptions}
-                                                onColorChange={(
-                                                    setting,
-                                                    color
-                                                ) =>
-                                                    handleColorChange(
-                                                        setting,
-                                                        color
-                                                    )
+                                                onColorChange={(setting, color) =>
+                                                    handleColorChange(setting, color)
                                                 }
                                             />
                                         </div>
@@ -75,29 +61,19 @@ const ControlContainer = ({
                                     setting.attributes.length === 1 ? (
                                         <div className="scroll">
                                             <div className="shapes-container">
-                                                {setting.attributes[0].options.map(
-                                                    (option, i) => (
-                                                        <ShapeOptionContainer
-                                                            currentShape={
-                                                                avatarUserSettings[
-                                                                    setting.id
-                                                                ].id
-                                                            }
-                                                            setting={setting.id}
-                                                            option={option}
-                                                            onShapeChange={(
-                                                                setting,
-                                                                shape
-                                                            ) =>
-                                                                handleShapeChange(
-                                                                    setting,
-                                                                    shape
-                                                                )
-                                                            }
-                                                            key={`setting-${i}`}
-                                                        />
-                                                    )
-                                                )}
+                                                {setting.attributes[0].options.map((option, i) => (
+                                                    <ShapeOptionContainer
+                                                        currentShape={
+                                                            avatarUserSettings[setting.id].id
+                                                        }
+                                                        setting={setting.id}
+                                                        option={option}
+                                                        onShapeChange={(setting, shape) =>
+                                                            handleShapeChange(setting, shape)
+                                                        }
+                                                        key={`setting-${i}`}
+                                                    />
+                                                ))}
                                             </div>
                                         </div>
                                     ) : null // handle multiple attributes here

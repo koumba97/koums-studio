@@ -11,9 +11,7 @@ export const useShuffleAvatar = () => {
 
         const randomAttribute = attributes[0];
         const randomShape =
-            randomAttribute.options[
-                Math.floor(Math.random() * randomAttribute.options.length)
-            ];
+            randomAttribute.options[Math.floor(Math.random() * randomAttribute.options.length)];
 
         const randomColor = colorOptions
             ? colorOptions[Math.floor(Math.random() * colorOptions.length)]
